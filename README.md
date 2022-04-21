@@ -15,7 +15,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
 # Available plugins :
 
-## **[placeSearch]()**- 
+## **[placeSearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/placeSearch-plugin)**- 
 
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/place_search.JPG)
@@ -31,7 +31,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
  - Available with many inbuilt configurations     [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin)
 
 
-## **[placePicker]()**
+## **[placePicker](https://github.com/mappls-api/mappls-web-plugins/tree/main/placePicker-plugin)**
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/place_picker.JPG )
 
@@ -43,7 +43,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 - Available with many inbuilt configurations.
 [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin)
 
-## **[nearbySearch]()**
+## **[nearbySearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/nearbySearch-plugin)**
 
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/nearby.JPG )
@@ -60,7 +60,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
    -  Available with many inbuilt configurations which makes using this plugin more and more reliable. [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Nearbysearch/mappls-nearbysearch-plugin)
 
-- [Direction-Plugin]()
+- [Direction-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/directions-plugin)
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/Direction.JPG)
 
@@ -92,13 +92,13 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/Direction_events%20along%20route.JPG)   
 
-## **[marker-Plugin]()**
+## **[marker-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/marker-plugin)**
  A simple plugin to render places on map as point markers. The Marker plugin for MapmyIndia Web Map JS library is provided as a means to enable rendering of searched Places via eLoc as markers top of MapmyIndia Maps. [Read more](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin)
 
-## **[getDistance-Method]()**
+## **[getDistance-Method](https://github.com/mappls-api/mappls-web-plugins/tree/main/getDistance%20Method)**
 This method, offered by MapmyIndia Places & Directions SDK for Web, computes the routable distance and duration between a set of source/primary positions and a list of all supplied secondary positions using two mode of route calculation i.e. optimal OR shortest.
 
-## **[eLoc-Plugin]()**
+## **[eLoc-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin)**
 A simple plugin / widget to render details of a particular place. The Place Details plugin for MapmyIndia Web Map JS library is provided as a means to enable rendering of MapmyIndia Places on MapmyIndia Maps. [Read more](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placedetails/mappls-placedetails-plugin)
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/place_detail.JPG)
