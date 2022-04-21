@@ -60,7 +60,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
    -  Available with many inbuilt configurations which makes using this plugin more and more reliable. [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Nearbysearch/mappls-nearbysearch-plugin)
 
-- [Direction-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/directions-plugin)
+## **[Direction-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/directions-plugin)**
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/Direction.JPG)
 
