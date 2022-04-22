@@ -1,42 +1,52 @@
-![MapmyIndia APIs](https://about.mappls.com/images/mappls-b-logo.svg)
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
 
-# MapmyIndia Directions Plugin for Mappls WEB SDK
+# Mappls Directions Plugin for Mappls Web Maps
 
-**Easy To Integrate Routing APIs & Map SDKs For Web Applications**
+**Easy To Integrate Routing APIs & Maps For Web Applications**
 
-Powered with India's most comprehensive and robust mapping functionalities. Now Available for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
+Powered with India's most comprehensive and robust mapping functionalities. Now Available for [238 nations](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) accross the world.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development.
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs.
+
+
 
 ## Document Version History
 
-| Version | Last Updated  | Author                                                        |
-| ------- | ------------- | ------------------------------------------------------------- |
-| 3.0   | 15 April 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) |
+| Version | Last Updated | Author |
+| ---- | ---- | ---- |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
+
 
 ## Introduction
+
+
+Before using the Plugin in the Maps JS, first ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps JS.
+
+1. Copy and paste the JWT API key or generated Auth token from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+2. The sample codes are provided to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-direction-plugin)
 
 This plugin, offered by Mappls Places & Directions SDK for Web, uses integrated places searches for directions for several modes of transportation, including driving, biking and walking.
 
 The plugin offers the following basic functionalities:
 
-1. Takes support of Mappls(MapmyIndia) Place search for searching locations of origin, destinations and via points.
+1. Integrated support of Mappls(MapmyIndia) Place search for searching locations of origin, destinations and via points.
 2. It allows to use origin and destinations in MapmyIndia's digital address (semicolon separated) eLoc or WGS 84 geographical coordinates both.
-3.  The ability to set the vehicle profile like driving, and biking.
+3.  The ability to set the vehicle profile like driving, biking,trucking and walking.
 4. Easily set the resource for traffic and ETA information.
 
 
-For details, please contact apisupport@mapmyindia.com.
+For details, please contact apisupport@mappls.com.
 
-## Live Demo
+## Sample Implementation
 
-Visit the following link for visiting the live demo:
 
-[LIVE DEMO](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-direction-plugin)
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-direction-plugin) for assistance to create a sample implementation with your own keys. 
 
-## Implementation
+For detailed understanding of the plugin, Let’s get started!
 
+
+
+## Plugin's configurations
+Adding the Directions plugin in the script
 
 ### Script URL
 
@@ -111,7 +121,7 @@ Mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
         via:[{label:'mathura',geoposition:"28.544,77.4541"},{label:'Koshi',geoposition:"28.144,77.4541"}],
         ```
 14. `fitbounds`: (boolean). Used to fit the route to in map view bound. Default is true.
-15. `search` : Referred to the intergarated MapmyIndia Search. Default remains true.
+15. `search` : Referred to the intergarated Mappls Search. Default remains true.
 16. `divId`: The HTML where developer wishes results to be displayed.
 17. `divWidth`: (in pixels) For customizing or improving results display UI.
 18. `autoSubmit` : Property that will be called when user directly want to display the results. Default remains true.
@@ -122,9 +132,9 @@ Mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 <br>
 That's All !
 
-![](https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
 
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
   
   
@@ -145,7 +155,7 @@ Need support? contact us!
 
 [<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
 
-<div align="center">@ Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

@@ -1,37 +1,36 @@
-![MapmyIndia APIs](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
-# MapmyIndia getDistance Method for MapmyIndia Map JS WEB SDK
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
+
+# getDistance Method for Mappls Web Maps
 
 **Easy To Integrate Distance Matrix APIs & Map SDKs For Web Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities. Now Available for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development.
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs.
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development.
+2. The sample code is provided to help you understand the very basic functionality of Mappls APIs.
+
 
 ## Document Version History
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | 15 December 2020 | MapmyIndia API Team ([MH](https://github.com/mishkat313)) |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
 
 
-## Method Version History
-
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 0.0.1 | 15 December 2020 | MapmyIndia API Team ([BP](https://github.com/balmukandpathak)) |
 
 ## Introduction
 
-This method, offered by MapmyIndia Places & Directions SDK for Web, computes the routable distance and duration between a set of source/primary positions and a list of all supplied secondary positions using two mode of route calculation i.e. optimal OR shortest. The method also takes into account different modes of transport like 4 wheelers, two wheelers + more. Please note that maximum number of points are limited to 100 only including source and secondary positions.
+This method, offered by Mappls web plugins , computes the routable distance and duration between a set of source/primary positions and a list of all supplied secondary positions using two mode of route calculation i.e. optimal OR shortest. The method also takes into account different modes of transport like 4 wheelers, two wheelers + more. Please note that maximum number of points are limited to 100 only including source and secondary positions.
 
 The method offers the following basic functionalities: 
 1. The method computes the distance and duration from origin to number of supplied destinations on maps.
 2. The ability to set the vehicle profile like driving, biking and trucking.
 3. Easily set the resource for traffic and ETA information.
 4. The method also has 'many to many' functionality in case of multiple origins and destinations.
-5. It allows to use origin and destinations in MapmyIndia's digital address (semicolon separated) eLoc or WGS 84 geographical coordinates both.
-6. This method can only be used when **`CORS`** is enabled on your project. For details, please contact apisupport@mapmyindia.com.
+5. It allows to use origin and destinations in Mappls's digital address (semicolon separated) eLoc or WGS 84 geographical coordinates both.
+6. This method can only be used when **`CORS`** is enabled on your project. For details, please contact apisupport@mappls.com.
+
+For detailed understanding, Let’s get started!
 
 ## Live Demo
 
@@ -39,16 +38,18 @@ Visit the following link for visiting the live demo:
 
 [LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia-maps-distance-matrix-plugin)
 
+
 ## Implementation
+
 #### Script URL
 
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
 ```
 
 ## Method
 
-`MapmyIndia.getDistance()`
+`Mappls.getDistance()`
 
 ## Properties
 ### Mandatory
@@ -71,7 +72,7 @@ E.g. 2;3 means that 0th and 1st pairs are destination points. Default value is a
 
 ## Example
 ```js
-MapmyIndia.getDistance({
+Mappls.getDistance({
     coordinates: "mmi000;123zrr",
     callback: function(data) {
         console.log(data);
@@ -83,7 +84,7 @@ MapmyIndia.getDistance({
 
 ```js
 /*CALLING DISTANCE*/
-MapmyIndia.getDistance({
+Mappls.getDistance({
     coordinates: "518NSV;123ZRR;28.9797,77.6763"
 }, function(data) {
     resdiv.innerHTML = JSON.stringify(data).replace(/{/g, '<br>{<br>').replace(/}/g, '<br>}<br>').replace(/","/g, '",<br>"');
@@ -98,8 +99,9 @@ That's All !
 
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
+
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
@@ -117,7 +119,7 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

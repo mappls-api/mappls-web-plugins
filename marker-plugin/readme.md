@@ -1,66 +1,60 @@
-![MapmyIndia APIs](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
 
 
-# MapmyIndia Marker Plugin for MapmyIndia Map JS WEB SDK
+# Marker Plugin for Mappls Web Maps
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities.
 **Now Available**  for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development. 
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development. 
 
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs. 
+2. The sample code is provided to help you understand the very basic functionality of Mappls APIs. 
+
 
 ## Document Version History
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | 20 November 2020 | MapmyIndia API Team ([KB](https://github.com/kunalbharti)) |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
 
 
-## SDK Version History
-
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 0.0.1 | 20 November 2020 | MapmyIndia API Team ([BP](https://github.com/balmukandpathak)) |
 
 ## Introduction
 
-A simple plugin to render places on map as markers. The Marker plugin for MapmyIndia Web Map JS library is provided as a means to enable rendering of searched Places via eLoc as markers top of MapmyIndia Maps. 
+A simple plugin to render places on map as markers. The Marker plugin for Mappls Web Maps JS library is provided as a means to enable rendering of searched Places via eLoc as markers top of Mappls Maps. 
 
 The plugin can be used in combination with our Interactive Map JS libraries.
 
 The SDK offers the following basic functionalities: 
-1. Ability to render places directly using eLoc on MapmyIndia Maps SDK.
-2. A MapmyIndia.elocMarker() method to initiate rendering of Places on the map specified with eLoc(s) on the map.
+1. Ability to render places directly using eLoc on Mappls Maps SDK.
+2. A Mappls.elocMarker() method to initiate rendering of Places on the map specified with eLoc(s) on the map.
 3. Ability to add listeners on marker events, remove markers, customize icons and get fitbounds of the markers. 
 4. Ability to make markers draggable and add annotations (info popups + customizable popups).
 
 
 ## Live Demo
 
-Visit the following link for visiting the live demo: 
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
 
-[LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia_elocMarkerPlugin)
-
-The above implementation uses MapmyIndia Interactive Map JS library as map rendering framework showcasing integration of marker plugin.
+The above implementation uses Mappls Interactive Map JS library as map rendering framework showcasing integration of marker plugin.
 
 ## Implementation
 
-### Adding the MapmyIndia Marker plugin script
+### Adding the Marker plugin script
 
 #### Script URL
 
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
 ```
 
 ### 1. Initializing the Marker plugin
 
 #### Method
 
-`MapmyIndia.elocMarker()`
+`Mappls.elocMarker()`
 
 ```js
 /*marker plugin initialization*/
@@ -72,17 +66,17 @@ var markerOptions={
 	icon:{url:’2.png’,width:30,height:45}
 }
 
-var obj=MapmyIndia.elocMarker(markerOptions);
+var obj=Mappls.elocMarker(markerOptions);
 ```
 
 OR
 
 ```js
-var obj=MapmyIndia.elocMarker({map:map,eloc:'mmi000',popupHtml="<h1>MMI</h1>"});
+var obj=Mappls.elocMarker({map:map,eloc:'mmi000',popupHtml="<h1>MMI</h1>"});
 ```
 
 #### Mandatory Parameters
-1. `map`: object > vector map or raster map object from respective MapmyIndia Map SDKs.
+1. `map`: object > vector map or raster map object from respective Mappls Map JS.
 2. `eLoc(s)`: array of strings containing the eLoc(s) which need to be showcased on the map. <br> e.g. 
     ```html
     [‘mmi000’,’123zrrr’]
@@ -92,7 +86,7 @@ var obj=MapmyIndia.elocMarker({map:map,eloc:'mmi000',popupHtml="<h1>MMI</h1>"});
 1. `html`: (string or html) Text which needs to be written over the marker or if there is a need for further customization, then this param can also take in HTML div. <br>
 e.g. 
     ```html
-    'MapmyIndia'
+    'Mappls'
     ```
     OR 
     ```
@@ -100,7 +94,7 @@ e.g.
     ```
 2. `popupHtml`: (string or HTML) What needs to be displayed when marker is clicked. <br>e.g. 
     ```
-    [“<h1>MapmyIndia</h1>”,”<p>Agra</p>”]
+    [“<h1>Mappls</h1>”,”<p>Agra</p>”]
     ```
 3. `popupOptions`: (object) if the popup/annotation needs to be customized further. 
 The following are the sub-params for the object: 
@@ -126,7 +120,7 @@ The following are the sub-params for the object:
     e.g. 
     ```js
     {
-        url:'https://apis.mapmyindia.com/map_v3/2.png',
+        url:'https://apis.mappls.com/map_v3/2.png',
         width:30,
         height:40,
         offset:[20,40],
@@ -201,26 +195,26 @@ obj.setIcon(‘url.png’,’mmi000’); //replaces single marker's icon for the
 `setPopup()`
 
 ```js
-obj.setPopup({content:"<h1>MapmyIndia</h1>"}); //replaces all marker's pop up values.
+obj.setPopup({content:"<h1>Mappls</h1>"}); //replaces all marker's pop up values.
 ```
 
 OR
 
 ```js
-obj.setPopup({content:"<h1>MapmyIndia</h1>",eloc:'123zrr'}); //replaces single marker's popup value for the provided eLoc.
+obj.setPopup({content:"<h1>Agra</h1>",eloc:'123zrr'}); //replaces single marker's popup value for the provided eLoc.
 ```
 
 <br>
 
 
-
-That's All !
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
 
 
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
+
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
@@ -238,7 +232,7 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

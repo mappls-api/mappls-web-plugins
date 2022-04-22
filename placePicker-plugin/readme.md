@@ -1,66 +1,57 @@
-![MapmyIndia APIs](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
 
-
-# MapmyIndia Place Picker Plugin for MapmyIndia Map JS WEB SDK
+# Place Picker Plugin for Mappls Web Maps
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities.
 **Now Available**  for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development. 
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development. 
 
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs. 
+2. The sample code is provided to help you understand the very basic functionality of Mappls APIs. 
 
 ## Document Version History
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | 09 December 2020 | MapmyIndia API Team ([KB](https://github.com/kunalbharti)) |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
 
-
-## SDK Version History
-
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 0.0.1 | 09 December 2020 | MapmyIndia API Team ([BP](https://github.com/balmukandpathak)) |
 
 ## Introduction
 
 A simple plugin / widget to pick places from the map. This SDK also has integrated Place Picker Plugin as optional component that enables one to narrow down to picked place by searching for it first and then changing the position of the resulting point on map to fine-tune the results.
 
-The plugin can be used in combination with our Interactive Map JS library but it also possesses the adaptability to be used as an independent plugin within any web app implementation. Thus it enables developers to include MapmyIndia Places SDK in their own customized solutions easily.
+The plugin can be used in combination with our Interactive Map JS library but it also possesses the adaptability to be used as an independent plugin within any web app implementation. Thus it enables developers to include Mappls Places JS in their own customized solutions easily.
 
 The SDK offers the following basic functionalities: 
-1. Ability to pick or search places directly with or without MapmyIndia Maps visual interface.
-2. A MapmyIndia.placePicker() method to initiate the plugin and pick places from MapmyIndia Maps.
-3. Ability to get information from MapmyIndia Place Picker plugin through a callback.
+1. Ability to pick or search places directly with or without Mappls Maps visual interface.
+2. A Mappls.placePicker() method to initiate the plugin and pick places from Mappls Maps.
+3. Ability to get information from Mappls Place Picker plugin through a callback.
 4. Include the Place Picker Plugin with or without an interactive Map component.
 
 
-## Live Demo
+## Sample Implementation
 
-Visit the following link for visiting the live demo: 
 
-[LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia-maps-place-picker)
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
-The above implementation uses MapmyIndia Interactive Map JS library as map rendering framework showcasing integration of Place Picker plugin.
+For detailed understanding of the plugin, Let’s get started!
 
-## Implementation
 
-### Adding the MapmyIndia Place Picker plugin script
 
-#### Script URL
+## Plugin's Configurations
 
+Adding the Nearby Search plugin in the script
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
 ```
 
 ### 1. Initializing the Place Picker plugin
 
 #### Method
 
-`MapmyIndia.placePickersearch()`
+`Mappls.placePicker()`
 
 ```js
 /*Place Picker plugin initialization*/
@@ -79,12 +70,12 @@ var options=
         pinHeight:40
         */
     };
-var picker = new MapmyIndia.placePicker(options);
+var picker = new Mappls.placePicker(options);
 ```
 
 #### Mandatory Parameters
 1. `Place Options`: any object containing any of the two following mandatory configurations values.
-    - `map`: object > vector map or raster map object from respective MapmyIndia Map SDKs
+    - `map`: object > vector map or raster map object from respective Mappls Map JS
     ##### OR
     - `location`: (lat,lng) object // to get data without map.
 
@@ -102,13 +93,13 @@ var picker = new MapmyIndia.placePicker(options);
 
 <br>
 
-### 2. Calling MapmyIndia Place Picker for programmatically fixed text
+### 2. Calling Mappls Place Picker for programmatically fixed text
 
-Following is an example of calling MapmyIndia.placePicker() method programmatically for a fixed pair of coordinates rather than depending on a UI driven approach: 
+Following is an example of calling Mappls.placePicker() method programmatically for a fixed pair of coordinates rather than depending on a UI driven approach: 
 
 ```js
 /*CALL for coordinates - LIKE THIS*/
-    var obj=MapmyIndia.placePicker({location:{lat:28.9898,lng:77.9898}});
+    var obj=Mappls.placePicker({location:{lat:28.9898,lng:77.9898}});
 ```
 
 ### 3. Method for removing place picker plugin from map
@@ -169,68 +160,14 @@ obj.getLocation();
 
 ```
 
-### Sample code Snippet
-
-```html
-<html>
-   <head>
-      <title>MapmyIndia Plugin - Place Picker</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="desciption" content="Mapmyindia Place Picker Plugin">
-      <script src="https://apis.mapmyindia.com/advancedmaps/v1/<token/key>/map_load?v=1.3"></script>
-      <script src="https://apis.mapmyindia.com/advancedmaps/api/<token/jwt key>/map_sdk_plugins"></script>
-      <style>
-         body{margin: 0}
-         #map{
-         width: 100%; height: 100vh;margin:0;padding: 0;
-         }
-      </style>
-   </head>
-   <body>
-      <div id="map"></div>
-      <script>
-         /*Map Initialization*/
-          var map = new MapmyIndia.Map('map', {center: [28.62, 77.09], zoom: 15, search: false});
-          
-          /*Place Picker plugin initialization*/
-           var options={
-                map:map,
-                callback:callback_method
-               /*
-                location:{lat:28.8787,lng:77.08888},//to open that location on map on initailization
-                closeBtn:true,
-                closeBtn_callback:closeBtn_callback,
-                search:true,
-                topText:'Location Search',
-                pinImage:'pin.png', //custom pin image
-                pinHeight:40
-                */
-            };
-            var picker= new MapmyIndia.placePicker(options);
-            function callback_method(data) {
-                console.log(data);alert(JSON.stringify(data));
-             }   
-             /*methods
-              * 
-              picker.remove();
-              picker.getLocation();
-              picker.setLocation({lat:28.8787,lng:77.787877});
-              * 
-              */
-      </script>
-   </body>
-</html>
-```
-
-<br>
-
-That's All !
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
 
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
+
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
@@ -248,8 +185,9 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
+

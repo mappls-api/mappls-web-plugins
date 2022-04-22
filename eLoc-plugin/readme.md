@@ -1,29 +1,25 @@
-![MapmyIndia APIs](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
 
 
-# MapmyIndia Place Details Plugin for MapmyIndia Map JS WEB SDK
+# Place Details Plugin for Mappls Web Maps
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities.
 **Now Available**  for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development. 
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development. 
 
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs. 
+2. The sample code is provided to help you understand the very basic functionality of Mappls APIs. 
+
 
 ## Document Version History
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | 03 October 2020 | MapmyIndia API Team ([KB](https://github.com/kunalbharti)) |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
 
 
-## SDK Version History
-
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 0.0.1 | 03 October 2020 | MapmyIndia API Team ([BP](https://github.com/balmukandpathak)) |
 
 ## Introduction
 
@@ -35,35 +31,32 @@ The SDK offers the following basic functionalities:
 1. Ability to render places directly on map with reference to the provided eLoc(s).
 2. A getELoc() method to fetch the details of a place.
 3. Customizable markers
-4. Remove said markers from map.
+4. Remove markers from map.
+
+## Sample Implementation
 
 
-## Live Demo
+Visit the [samples](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin) for assistance to create a sample implementation with your own keys. 
 
-Visit the following link for visiting the live demo: 
+For detailed understanding, Let’s get started!
 
-[LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia-maps-geteloc-plugin)
+## Plugin's configurations
 
-The above implementation uses MapmyIndia Interactive Map JS library as map rendering framework showcasing integration of Place Details plugin.
+Adding the Place Details plugin in the script
 
-## Implementation
-
-### Adding the MapmyIndia Place Details plugin script
-
-#### Script URL
+#### 1. Script URL
 
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
 ```
 
-### 1. Initializing the Place Details plugin
-
+### 2. Initializing the Place Details plugin
 #### Method
 
-`MapmyIndia.getEloc()`
+`Mappls.getEloc()`
 
 ```js
-var elocObj = MapmyIndia.getEloc({ map: map, eloc: '3F45CB', callback: elocData });
+var elocObj = Mappls.getEloc({ map: map, eloc: '3F45CB', callback: elocData });
 ```
 
 #### Mandatory Parameters
@@ -71,7 +64,7 @@ var elocObj = MapmyIndia.getEloc({ map: map, eloc: '3F45CB', callback: elocData 
 
 #### Optional Parameters
 1. `map`: Map Object
-2. `icon`: MapmyIndia Interactive Map JS icon object 
+2. `icon`: Mappls Interactive Map JS icon object 
     (leaflet compatible icon object).
     - example: 
         ```js
@@ -86,70 +79,34 @@ var elocObj = MapmyIndia.getEloc({ map: map, eloc: '3F45CB', callback: elocData 
 9. `infoDiv` (boolean): To render html div on map or not. Default is true. (example: `infoDiv:true`)
 10. `click_callback`: method to call on click of callback. 
 
-### 2. Method to remove the markers populated by Place Details plugin
+### 3. Method to remove the markers populated by Place Details plugin
 
 ```js
 elocObj.remove();
 ```
 
-### 3. Method to set up the div content for populating details from getEloc() plugin
+### 4. Method to set up the div content for populating details from getEloc() plugin
 
 ```js
 elocObj.setDivContent(“Div html);
 ```
-### 4. Method to set up the pop up content on marker as html.
+### 5. Method to set up the pop up content on marker as html.
 For Eg:
 
 ```js
-obj.setPopup({content:"<h1>Hello MapmyIndia</h1>"});
+obj.setPopup({content:"<h1>Hello Mappls</h1>"});
 ```
 
-### Sample code Snippet
 
-```html
-<html>
-<head>
-    <title>MapmyIndia Plugin - getEloc Plugin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="desciption" content="Mapmyindia getEloc Plugin">
-    <script
-        src="https://apis.mapmyindia.com/advancedmaps/v1/0XXXXXXf-dXX0-4XX0-8XXa-eXXXXXXXXXX6/map_load?v=1.5"></script>
-    <script
-        src="https://apis.mapmyindia.com/advancedmaps/api/0XXXXXXf-dXX0-4XX0-8XXa-eXXXXXXXXXX6/map_sdk_plugins"></script>
-    <link rel="icon" href="https://www.mapmyindia.com/images/favicon.ico" type="image/x-icon">
-    <style>
-        #map {
-            width: 100%;
-            height: 60vh;
-        }
-    </style>
-</head>
+That's All ! Visit the [samples](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin) for assistance to create a sample implementation with your own keys.
 
-<body>
-    <div id="map"></div>
-    <script>
-    /*Map Initialization*/
-        var map = new MapmyIndia.Map('map', { center: [28.09, 78.3], zoom: 5, search: false, zoomControl: true, location: false, fullscreen: true, traffic: false, scrollWheelZoom: false });
-    /*getEloc plugin initialization*/
-        this.mk = MapmyIndia.getEloc({ map: map, eloc: '3F45CB', callback: elocData }); 
-        function elocData(data) 
-            { 
-                console.log(data); 
-            }
-    </script>
-</body>
-</html>
-```
-
-<br>
-
-That's All !
 
 
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
+
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
@@ -167,7 +124,7 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

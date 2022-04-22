@@ -1,66 +1,59 @@
-![MapmyIndia APIs](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
 
 
-# MapmyIndia Place Search Plugin for MapmyIndia Map JS WEB SDK
+# Place Search Plugin for Mappls Web Maps
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities.
 **Now Available**  for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development. 
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development. 
 
-2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs. 
-
+2. The sample code is provided to help you understand the very basic functionality of Mappls APIs. 
 ## Document Version History
 
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 0.0.1 | 17 November 2020 | MapmyIndia API Team ([KB](https://github.com/kunalbharti)) |
 
-
-## SDK Version History
 
 | Version | Last Updated | Author |
 | ---- | ---- | ---- |
-| 0.0.1 | 17 November 2020 | MapmyIndia API Team ([BP](https://github.com/balmukandpathak)) |
+| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
+
 
 ## Introduction
 
-A simple plugin / widget to search for places powered by the best online maps from MapmyIndia. The Place Search plugin for MapmyIndia Web Map JS library is provided as a means to enable searching of Places on MapmyIndia Maps. 
+A simple plugin / widget to search for places powered by the best online maps from Mappls. The Place Search plugin for Mappls Web Map JS library is provided as a means to enable searching of Places on Mappls Maps. 
 
-The plugin can be used in combination with our Interactive Map JS library but it also possesses the adaptability to be used as an independent plugin within any web app implementation. Thus it enables developers to include MapmyIndia Places SDK in their own customized solutions easily.
+The plugin can be used in combination with our Interactive Map JS library but it also possesses the adaptability to be used as an independent plugin within any web app implementation. Thus it enables developers to include Mappls Places JS in their own customized solutions easily.
 
 The SDK offers the following basic functionalities: 
-1. Ability to search for places directly with or without MapmyIndia Maps visual interface.
-2. A MapmyIndia.search() method to initiate search across all types places available on MapmyIndia.
-3. Ability to get information from MapmyIndia Place Search plugin through a callback
+1. Ability to search for places directly with or without Mappls Maps visual interface.
+2. A Mappls.search() method to initiate search across all types places available on Mappls.
+3. Ability to get information from Mappls Place Search plugin through a callback
 4. Include the Place Search Plugin with or without an interactive Map component.
 
 
-## Live Demo
+## Sample Implementation
 
-Visit the following link for visiting the live demo: 
 
-[LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia-maps-search-plugin)
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
 
-The above implementation uses MapmyIndia Interactive Map JS library as map rendering framework showcasing integration of Place Search plugin.
+For detailed understanding of the plugin, Let’s get started!
 
-## Implementation
 
-### Adding the MapmyIndia Place Search plugin script
+## Plugin's Configurations
 
-#### Script URL
+Adding the Nearby Search plugin in the script
 
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0"></script>
 ```
 
 ### 1. Initializing the Place Search plugin
 
 #### Method
 
-`MapmyIndia.search()`
+`Mappls.search()`
 
 ```js
 /*Search plugin initialization*/
@@ -80,7 +73,7 @@ The above implementation uses MapmyIndia Interactive Map JS library as map rende
                 */
             };
 
-new MapmyIndia.search(document.getElementById("auto"),placeOptions,callback);
+new Mappls.search(document.getElementById("auto"),placeOptions,callback);
 ```
 
 #### Mandatory Parameters
@@ -104,7 +97,7 @@ new MapmyIndia.search(document.getElementById("auto"),placeOptions,callback);
         - Can be used to filter results by view bound. e.g. `filter=bounds:28.598882,77.212407;28.467375,77.353513`
     - `bridge`: initiates a bridge to be created to provide applicable nearby API searches. Involves using Nearby Search Plugin in conjunction with Place Search Plugin.
     - `hyperLocal`:This parameter lets the search give results that are hyper-localized to the reference location passed in the location parameter. This means that nearby                          results are given higher ranking than results far from the reference location. Highly prominent results will still appear in the search results, however theu                    will be lower in the list of results. This parameter will work ONLY in conjunction with the location parameter.
-    - `tokenizeAddress`: boolean value used to return address tokens from the searched places from MapmyIndia Search APIs. e.g. `tokenizeAddress:true`
+    - `tokenizeAddress`: boolean value used to return address tokens from the searched places from Mappls Search APIs. e.g. `tokenizeAddress:true`
     - `distance`: boolean value used to show aerial distance from location passed in `location`. of the searched place in results listing e.g. `distance:true`
     - `geolocation` : boolean value used to enable or disable current location selection . Default is true.
     - `width`: width of the suggested div. e.g. `width:300`
@@ -115,13 +108,13 @@ new MapmyIndia.search(document.getElementById("auto"),placeOptions,callback);
 
 <br>
 
-### 2. Calling MapmyIndia Place Search for programmatically fixed text
+### 2. Calling Mappls Place Search for programmatically fixed text
 
-Following is an example of calling MapmyIndia.search() method programmatically for a fixed text rather than depending on a UI driven approach: 
+Following is an example of calling Mappls.search() method programmatically for a fixed text rather than depending on a UI driven approach: 
 
 ```js
 /*CALL for fix text - LIKE THIS*/
-    new MapmyIndia.search("agra",placeOptions,callback);
+    new Mappls.search("agra",placeOptions,callback);
 ```
 
 ### Other Methods
@@ -132,84 +125,20 @@ For Eg: if the users receives an error in callback like {error: "error-Passport 
 use
 
 ```js
-MapmyIndia.setToken();
+Mappls.setToken();
 ``` 
 If this returns true, then the token is placed successfuly, otherwise token is not valid.
 
 
 
-### Sample code Snippet
-
-```html
-<html>
-   <head>
-      <title>MapmyIndia Plugin - Search Plugin</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="desciption" content="Mapmyindia Search Plugin">
-      <script src="https://apis.mapmyindia.com/advancedmaps/v1/<token/key>/map_load?v=1.3"></script>
-      <script src="https://apis.mapmyindia.com/advancedmaps/api/<token/jwt key>/map_sdk_plugins"></script>
-      <style>
-         body{margin: 0}
-         #map{
-         width: 100%; height: 100vh;margin:0;padding: 0;
-         }
-         .infoCls_map{margin-top: 60px !important;min-width: 300px}
-         #auto{color: #000;max-width: 99%;width:300px;position:absolute;z-index: 999;font-size: 15px;padding:10px;border: 1px solid #ddd;outline: none !important;top:5px;border-radius:10px;margin:4px;}
-      </style>
-   </head>
-   <body>
-      <div id="map"></div>
-      <input  type="text" id="auto" name="auto" class="search-outer form-control as-input" placeholder="Search places or eLoc's..." required="" spellcheck="false" >
-      <script>
-         /*Map Initialization*/
-          var map = new MapmyIndia.Map('map', {center: [28.09, 78.3], zoom: 5, search: false});
-          
-          /*Search plugin initialization*/
-            var optional_config={
-                location:[28.61, 77.23],
-               /* pod:'City',
-                bridge:true,
-                tokenizeAddress:true,*
-                filter:'cop:9QGXAM',
-                distance:true,
-                width:300,
-                height:300*/
-            };
-            new MapmyIndia.search(document.getElementById("auto"),optional_config,callback);
-            
-            /*CALL for fix text - LIKE THIS
-             * 
-             new MapmyIndia.search("agra",optional_config,callback);
-             * 
-             * */
-         
-            var marker;
-            function callback(data) { 
-                if(data)
-                {
-                    var dt=data[0];
-                    if(!dt) return false;
-                    var eloc=dt.eLoc;
-                    var place=dt.placeName+", "+dt.placeAddress;
-                    /*Use elocMarker Plugin to add marker*/
-                    if(marker) marker.remove();
-                    marker=new MapmyIndia.elocMarker({map:map,eloc:eloc,popupHtml:place,popupOptions:{openPopup:true}}).fitbounds();
-                }
-              }    
-      </script>
-   </body>
-</html>
-```
-
-<br>
-
-That's All !
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
 
 
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> </p>](https://www.mapmyindia.com/api)
-Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
+<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
+
+Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
@@ -227,8 +156,9 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
+
