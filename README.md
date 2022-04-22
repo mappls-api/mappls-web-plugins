@@ -15,7 +15,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
 # Available plugins :
 
-## **[placeSearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/placeSearch-plugin)**- 
+## **[placeSearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/placeSearch-plugin)**
 
 
 ![MapmyIndia APIs](https://about.mappls.com/api/api_doc_assets/place_search.JPG)
@@ -56,7 +56,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
    -  Already empowered with Real Time Updates and HyperLocal Search.
 
-    - Indic Support (Hindi currently) - Can be configured to provide human readable address from a pin on the map in Hindi.
+   - Indic Support (Hindi currently) - Can be configured to provide human readable address from a pin on the map in Hindi.
 
    -  Available with many inbuilt configurations which makes using this plugin more and more reliable. [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Nearbysearch/mappls-nearbysearch-plugin)
 
