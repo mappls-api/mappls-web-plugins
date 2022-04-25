@@ -47,37 +47,37 @@ The above implementation uses Mappls Interactive Map JS library as map rendering
 #### Script URL
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0"></script>
 ```
 
 ### 1. Initializing the Marker plugin
 
 #### Method
 
-`Mappls.elocMarker()`
+`Mappls.pinMarker()`
 
 ```js
 /*marker plugin initialization*/
 var markerOptions={
 	map:map,
-	eloc:[‘mmi000’,’123zrr’],
+	pin:[‘mmi000’,’123zrr’],
 	popupHtml:[“<h1>MMI</h1>”,”<h1>Agra</h1>”],
 	html:[“1”,”2”],
 	icon:{url:’2.png’,width:30,height:45}
 }
 
-var obj=Mappls.elocMarker(markerOptions);
+Mappls.pinMarker(markerOptions,callback);
 ```
 
 OR
 
 ```js
-var obj=Mappls.elocMarker({map:map,eloc:'mmi000',popupHtml="<h1>MMI</h1>"});
+Mappls.pinMarker({map:map,pin:'mmi000',popupHtml="<h1>MMI</h1>"});
 ```
 
 #### Mandatory Parameters
 1. `map`: object > vector map or raster map object from respective Mappls Map JS.
-2. `eLoc(s)`: array of strings containing the eLoc(s) which need to be showcased on the map. <br> e.g. 
+2. `pin`: array of strings containing the eLoc(s) which need to be showcased on the map. <br> e.g. 
     ```html
     [‘mmi000’,’123zrrr’]
     ```
@@ -104,7 +104,7 @@ The following are the sub-params for the object:
     <br> e.g. 
     ```js
     {
-        className:’myClass’,
+        className:'myClass',
         offset:{},
         openPopup:true //open popup as default with add marker
      }
@@ -141,7 +141,7 @@ obj.fitbounds(options); //options are optional e.g. {padding:100}
 
 - `padding`: option can be used to setup a padding around the viewbound to fit the markers in.
 
-### 3. Method for removing markers
+### 3. Method for removing markers with callback
 #### Method
 `remove()`
 
@@ -201,7 +201,7 @@ obj.setPopup({content:"<h1>Mappls</h1>"}); //replaces all marker's pop up values
 OR
 
 ```js
-obj.setPopup({content:"<h1>Agra</h1>",eloc:'123zrr'}); //replaces single marker's popup value for the provided eLoc.
+obj.setPopup({content:"<h1>Agra</h1>",pin:'123zrr'}); //replaces single marker's popup value for the provided Pin.
 ```
 
 <br>
