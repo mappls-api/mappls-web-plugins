@@ -46,7 +46,7 @@ For detailed understanding of the plugin, Let’s get started!
 Adding the Nearby Search plugin in the script
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0&libraries=search"></script>
 ```
 
 ### 1. Initializing the Place Search plugin
