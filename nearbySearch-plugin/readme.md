@@ -47,7 +47,7 @@ For detailed understanding of the plugin, Let’s get started!
 Adding the Nearby Search plugin in the script
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0&libraries=nearby"></script>
 ```
 
 ### 1. Initializing the Nearby Search plugin
@@ -70,7 +70,7 @@ var options = {
   }
 }
 
-var nr = Mappls.nearby(options);
+Mappls.nearby(options, callback);
 ```
 
 #### Mandatory Parameters
@@ -79,6 +79,7 @@ var nr = Mappls.nearby(options);
     - **As a JSON object**: `keywords:{'FINATM':'ATMS','FODCOF':'Restaurants'}`
     <br>This mechanism is used to display a selection of POI categories on a UI.
     <br>If `keywords` parameter is used, then `refLocation` input also becomes mandatory.
+2.  `callback`: (method): results will be returned in this method if specified.
 
 OR
 
@@ -132,8 +133,7 @@ OR
 12. `sortBy`: (string)Used to sort the nearby search results.
 13. `page`: (number): to request another page of results if available.
 14. `pod`: (string): to filter to a certain type of results.
-15. `callback`: (method): results will be returned in this method if specified.
-16. `callback_click`: (method): a method that will be called when user clicks on any listing. The action returns the eLoc of the selected place.
+15. `callback_click`: (method): a method that will be called when user clicks on any listing. The action returns the eLoc of the selected place.
 
 <br>
 
@@ -160,7 +160,7 @@ var res=Mappls.nearby({divId:'nearby_divId',keywords:{'FINATM':'ATMs', 'FODCOF':
 ```
 This will place a selection of keywords and a location selection UI inside `divId`.
 
-### Remove Nearby Markers from Map
+### Remove Nearby Markers within callback from Map
 
 Use remove() method to remove markers from map.
 
