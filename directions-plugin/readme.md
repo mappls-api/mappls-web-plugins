@@ -51,7 +51,7 @@ Adding the Directions plugin in the script
 ### Script URL
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/<token>/map_sdk_plugins?v=3.0"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/<token>/map_sdk_plugins?v=3.0&libraries=direction"></script>
 ```
 
 ## Method
@@ -73,8 +73,8 @@ Mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 
 ### Optional Parameters
 
-1. `start` (string): Eloc or lat,long.
-2. `end` (string): Eloc or lat,long.
+1. `start` (string): Eloc(Mappls Pin) or lat,long.
+2. `end` (string): Eloc(Mappls Pin) or lat,long.
 3. `resource` (string): Default is `route_adv` and can be changed to `route_eta` or `route_traffic` as per requirement.
 4. `profile` (string): Default `driving` for four wheelers and can be changed to `biking` and `trucking` for two wheelers and heavy vehicles respectively.
 5. `rtype` (boolean): type of route required for navigation, where values mean:
