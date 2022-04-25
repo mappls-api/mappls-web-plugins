@@ -29,7 +29,7 @@ The plugin can be used in combination with our Interactive Map JS library but it
 
 The SDK offers the following basic functionalities: 
 1. Ability to render places directly on map with reference to the provided eLoc(s).
-2. A getELoc() method to fetch the details of a place.
+2. A getPinDetails() method to fetch the details of a place.
 3. Customizable markers
 4. Remove markers from map.
 
@@ -47,54 +47,50 @@ Adding the Place Details plugin in the script
 #### 1. Script URL
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0&libraries=getPinDetails"></script>
 ```
 
 ### 2. Initializing the Place Details plugin
 #### Method
 
-`Mappls.getEloc()`
+`Mappls.getPinDetails()`
 
 ```js
-var elocObj = Mappls.getEloc({ map: map, eloc: '3F45CB', callback: elocData });
+Mappls.getPinDetails({ map: map, pin: '3F45CB'}, callback);
 ```
 
 #### Mandatory Parameters
-1. `eLoc`: The eLoc whose details are required.
+1. `getPinDetails`: The pin (Mappls Pin/Eloc) whose details are required.
+2. `callback`: to return data to a specified callback method.
+
 
 #### Optional Parameters
 1. `map`: Map Object
-2. `icon`: Mappls Interactive Map JS icon object 
-    (leaflet compatible icon object).
-    - example: 
-        ```js
-        L.icon({iconUrl: 'https://maps.mapmyindia.com/images/general.png'});
-        ```
+2. `icon`: custom icon url.
 3. `divId`: The div to put the result in.
-4. `callback`: to return data to a specified callback method.
-5. `markerPopup` (boolean): to show pop-ups on marker click. Default is true.(example: `markerPopup:true`)
-6. `popupHtml`: to show html pop up on marker click. User should define values to be shown while using this parameter.(example: `obj.setPopup({content:"<h1>Hello MapmyIndia</h1>"})`)
-7. `fitbounds` (boolean): To show all rendered eLoc(s) in a single view bound. (example: `fitbounds:true`)
-8. `fitboundOptions` : padding in fitbounds, if any. (Example: `{ padding:50,maxZoom:18}`)
-9. `infoDiv` (boolean): To render html div on map or not. Default is true. (example: `infoDiv:true`)
-10. `click_callback`: method to call on click of callback. 
+4. `markerPopup` (boolean): to show pop-ups on marker click. Default is true.(example: `markerPopup:true`)
+5. `popupHtml`: to show html pop up on marker click. User should define values to be shown while using this parameter.(example: `obj.setPopup({content:"<h1>Hello MapmyIndia</h1>"})`)
+6. `fitbounds` (boolean): To show all rendered eLoc(s) in a single view bound. (example: `fitbounds:true`)
+7. `fitboundOptions` : padding in fitbounds, if any. (Example: `{ padding:50,maxZoom:18}`)
+8. `infoDiv` (boolean): To render html div on map or not. Default is true. (example: `infoDiv:true`)
+9. `click_callback`: method to call on click of callback. 
 
-### 3. Method to remove the markers populated by Place Details plugin
+### 3. Method to remove the markers with callback populated by Place Details Plugin
 
 ```js
-elocObj.remove();
+pinObj.remove();
 ```
 
 ### 4. Method to set up the div content for populating details from getEloc() plugin
 
 ```js
-elocObj.setDivContent(“Div html);
+pinObj.setDivContent(“Div html);
 ```
 ### 5. Method to set up the pop up content on marker as html.
 For Eg:
 
 ```js
-obj.setPopup({content:"<h1>Hello Mappls</h1>"});
+pinObj.setPopup({content:"<h1>Hello Mappls</h1>"});
 ```
 
 
