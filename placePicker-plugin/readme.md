@@ -44,7 +44,7 @@ For detailed understanding of the plugin, Let’s get started!
 
 Adding the Nearby Search plugin in the script
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0&libraries=placePicker"></script>
 ```
 
 ### 1. Initializing the Place Picker plugin
@@ -58,7 +58,6 @@ Adding the Nearby Search plugin in the script
 var options=
     {
         map:map,
-        callback:callback_method
         /*
         location:{lat:28.8787,lng:77.08888}, //to open that location on map on initailization
         closeBtn:true,
@@ -70,7 +69,7 @@ var options=
         pinHeight:40
         */
     };
-var picker = new Mappls.placePicker(options);
+Mappls.placePicker(options, callback);
 ```
 
 #### Mandatory Parameters
@@ -78,6 +77,7 @@ var picker = new Mappls.placePicker(options);
     - `map`: object > vector map or raster map object from respective Mappls Map JS
     ##### OR
     - `location`: (lat,lng) object // to get data without map.
+2. `callback`: (method): to get data after location selection . If no callback method is specified, UI `GET` button will be hidden. In this case, the consuming app can get data by calling method `getData()`.
 
 #### Optional Parameters
 1. `Place Options`: any object containing optional configurations for modifying the search request.
@@ -89,8 +89,6 @@ var picker = new Mappls.placePicker(options);
     - `topText`: The banner text to show at the top as title of the Place Picker plugin. Default is `Place Picker`.
     - `pinImage`: (URL) The PIN icon on the map. 
     - `pinHeight`: (number). To adjust the placement of the PIN icon on the map.
-    - `callback`: (method): to get data after location selection . If no callback method is specified, UI `GET` button will be hidden. In this case, the consuming app can get data by calling method `getData()`.
-
 <br>
 
 ### 2. Calling Mappls Place Picker for programmatically fixed text
@@ -99,10 +97,10 @@ Following is an example of calling Mappls.placePicker() method programmatically 
 
 ```js
 /*CALL for coordinates - LIKE THIS*/
-    var obj=Mappls.placePicker({location:{lat:28.9898,lng:77.9898}});
+Mappls.placePicker({location:{lat:28.9898,lng:77.9898}},callback);
 ```
 
-### 3. Method for removing place picker plugin from map
+### 3. Method for removing place picker plugin with callback from map
 #### Method
 `remove()`
 
@@ -110,7 +108,7 @@ Following is an example of calling Mappls.placePicker() method programmatically 
 obj.remove();
 ```
 
-### 4. Method for programmatically setting location on map.
+### 4. Method for programmatically setting location within callback on map.
 #### Method
 `setLocation()`
 
@@ -134,7 +132,7 @@ obj.getLocation();
 
 ### Response Structure of Place Picker Data
 
-```json
+```js
 {	
     area: "India", //country information
 	city: "New Delhi", // city of the pinned place.
