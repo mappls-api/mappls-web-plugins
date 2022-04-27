@@ -75,8 +75,8 @@ Mappls.nearby(options, callback);
 
 #### Mandatory Parameters
 1. `keywords`: The string or JSON object which will be passed as input query to the search engine. Examples
-    - **As a string**: `keywords:"atm"`
-    - **As a JSON object**: `keywords:{'FINATM':'ATMS','FODCOF':'Restaurants'}`
+    - **As a string**: `keywords:"atm"`. This parameter supports input in Hindi Language `keywords:"चाय"`. To get the feature contact apisupport@mapmyindia.com.
+    - **As a JSON object**: `keywords:{'FINATM':'ATMS','FODCOF':'Restaurants'}`. This parameter supports input in Hindi Language `keywords:{'एचडीएफसी ':'एटीएम'}`. To get the feature contact apisupport@mapmyindia.com.
     <br>This mechanism is used to display a selection of POI categories on a UI.
     <br>If `keywords` parameter is used, then `refLocation` input also becomes mandatory.
 2.  `callback`: (method): results will be returned in this method if specified.
