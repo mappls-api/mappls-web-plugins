@@ -54,7 +54,7 @@ Adding the Nearby Search plugin in the script
 
 #### Method
 
-`Mappls.nearby()`
+`mappls.nearby()`
 
 ```js
 /*Nearby plugin initialization*/
@@ -70,7 +70,7 @@ var options = {
   }
 }
 
-Mappls.nearby(options, callback);
+mappls.nearby(options, callback);
 ```
 
 #### Mandatory Parameters
@@ -141,22 +141,22 @@ OR
 
 #### 1. Get data from category & coordinates
 
-Following is an example of calling Mappls.nearby() method to get data from category and coordinates: 
+Following is an example of calling mappls.nearby() method to get data from category and coordinates: 
 
 ```js
-var res=Mappls.nearby({keywords:"atm",refLocation:"123ZRR"});
+var res=mappls.nearby({keywords:"atm",refLocation:"123ZRR"});
 ```
 
 #### 2. Get data from Mappls Search category url
 
 ```js
-var res=Mappls.nearby({hyperLink:'https://atlas.mapmyindia.com/api/places/nearby/json?explain&richData&&refLocation=28.61,77.23&keywords=FINATM'});
+var res=mappls.nearby({hyperLink:'https://atlas.mapmyindia.com/api/places/nearby/json?explain&richData&&refLocation=28.61,77.23&keywords=FINATM'});
 ```
 
 #### 3. Get data from category & location selection UI
 
 ```js
-var res=Mappls.nearby({divId:'nearby_divId',keywords:{'FINATM':'ATMs', 'FODCOF':'Restaurants'}});
+var res=mappls.nearby({divId:'nearby_divId',keywords:{'FINATM':'ATMs', 'FODCOF':'Restaurants'}});
 ```
 This will place a selection of keywords and a location selection UI inside `divId`.
 
