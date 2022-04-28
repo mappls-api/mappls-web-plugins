@@ -26,7 +26,7 @@ The plugin can be used in combination with our Interactive Map JS library but it
 
 The SDK offers the following basic functionalities: 
 1. Ability to pick or search places directly with or without Mappls Maps visual interface.
-2. A Mappls.placePicker() method to initiate the plugin and pick places from Mappls Maps.
+2. A mappls.placePicker() method to initiate the plugin and pick places from Mappls Maps.
 3. Ability to get information from Mappls Place Picker plugin through a callback.
 4. Include the Place Picker Plugin with or without an interactive Map component.
 
@@ -51,7 +51,7 @@ Adding the Nearby Search plugin in the script
 
 #### Method
 
-`Mappls.placePicker()`
+`mappls.placePicker()`
 
 ```js
 /*Place Picker plugin initialization*/
@@ -69,7 +69,7 @@ var options=
         pinHeight:40
         */
     };
-Mappls.placePicker(options, callback);
+mappls.placePicker(options, callback);
 ```
 
 #### Mandatory Parameters
@@ -97,7 +97,7 @@ Following is an example of calling Mappls.placePicker() method programmatically 
 
 ```js
 /*CALL for coordinates - LIKE THIS*/
-Mappls.placePicker({location:{lat:28.9898,lng:77.9898}},callback);
+mappls.placePicker({location:{lat:28.9898,lng:77.9898}},callback);
 ```
 
 ### 3. Method for removing place picker plugin with callback from map
