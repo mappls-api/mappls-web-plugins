@@ -54,7 +54,7 @@ The above implementation uses Mappls Interactive Map JS library as map rendering
 
 #### Method
 
-`Mappls.pinMarker()`
+`mappls.pinMarker()`
 
 ```js
 /*marker plugin initialization*/
@@ -66,13 +66,13 @@ var markerOptions={
 	icon:{url:’2.png’,width:30,height:45}
 }
 
-Mappls.pinMarker(markerOptions,callback);
+mappls.pinMarker(markerOptions,callback);
 ```
 
 OR
 
 ```js
-Mappls.pinMarker({map:map,pin:'mmi000',popupHtml="<h1>MMI</h1>"});
+mappls.pinMarker({map:map,pin:'mmi000',popupHtml="<h1>MMI</h1>"});
 ```
 
 #### Mandatory Parameters
@@ -86,7 +86,7 @@ Mappls.pinMarker({map:map,pin:'mmi000',popupHtml="<h1>MMI</h1>"});
 1. `html`: (string or html) Text which needs to be written over the marker or if there is a need for further customization, then this param can also take in HTML div. <br>
 e.g. 
     ```html
-    'Mappls'
+    'mappls'
     ```
     OR 
     ```
