@@ -28,7 +28,7 @@ The plugin can be used in combination with our Interactive Map JS library but it
 
 The SDK offers the following basic functionalities: 
 1. Ability to search for places directly with or without Mappls Maps visual interface.
-2. A Mappls.search() method to initiate search across all types places available on Mappls.
+2. A mappls.search() method to initiate search across all types places available on Mappls.
 3. Ability to get information from Mappls Place Search plugin through a callback
 4. Include the Place Search Plugin with or without an interactive Map component.
 
@@ -53,7 +53,7 @@ Adding the Nearby Search plugin in the script
 
 #### Method
 
-`Mappls.search()`
+`mappls.search()`
 
 ```js
 /*Search plugin initialization*/
@@ -73,7 +73,7 @@ Adding the Nearby Search plugin in the script
                 */
             };
 
-new Mappls.search(document.getElementById("auto"),placeOptions,callback);
+new mappls.search(document.getElementById("auto"),placeOptions,callback);
 ```
 
 #### Mandatory Parameters
@@ -114,7 +114,7 @@ Following is an example of calling Mappls.search() method programmatically for a
 
 ```js
 /*CALL for fix text - LIKE THIS*/
-    new Mappls.search("agra",placeOptions,callback);
+    new mappls.search("agra",placeOptions,callback);
 ```
 
 ### Other Methods
@@ -125,7 +125,7 @@ For Eg: if the users receives an error in callback like {error: "error-Passport 
 use
 
 ```js
-Mappls.setToken();
+mappls.setToken();
 ``` 
 If this returns true, then the token is placed successfuly, otherwise token is not valid.
 
