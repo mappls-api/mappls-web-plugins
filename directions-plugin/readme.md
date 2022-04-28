@@ -55,7 +55,7 @@ Adding the Directions plugin in the script
 
 ## Method
 
-`Mappls.direction()`
+`mappls.direction()`
 
 ## Properties
 
@@ -66,7 +66,7 @@ Adding the Directions plugin in the script
 ## Example
 
 ```js
-Mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',geoposition:"1T182A"}});
+mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',geoposition:"1T182A"}});
 ```
 ## Additional Parameter - alongTheRoute
  
@@ -107,7 +107,8 @@ Mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 
 2.  `routeSummary` : _true/false_. Default is false. This feature allows to show the events reports along the route like road and safety, traffic conditions etc.
     
-    To access this parameter , please contact [API Support](mailto:apisupport@mappls.com)
+    To access this parameter , please contact [API Support](mailto:apisupport@
+    .com)
     
      Refer to the Code Snippet if the you need to get the callback.
  
