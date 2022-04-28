@@ -49,7 +49,7 @@ Visit the following link for visiting the live demo:
 
 ## Method
 
-`Mappls.getDistance()`
+`mappls.getDistance()`
 
 ## Properties
 ### Mandatory
@@ -72,7 +72,7 @@ E.g. 2;3 means that 0th and 1st pairs are destination points. Default value is a
 
 ## Example
 ```js
-Mappls.getDistance({
+mappls.getDistance({
     coordinates: "mmi000;123zrr",
     callback: function(data) {
         console.log(data);
@@ -84,7 +84,7 @@ Mappls.getDistance({
 
 ```js
 /*CALLING DISTANCE*/
-Mappls.getDistance({
+mappls.getDistance({
     coordinates: "518NSV;123ZRR;28.9797,77.6763"
 }, function(data) {
     resdiv.innerHTML = JSON.stringify(data).replace(/{/g, '<br>{<br>').replace(/}/g, '<br>}<br>').replace(/","/g, '",<br>"');
