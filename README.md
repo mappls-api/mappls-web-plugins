@@ -6,7 +6,7 @@ Mappls Web plugins is a JavaScript library for interactive maps provided by Mapp
 
 **MAPPLS** will be there in every step of the way, building new tools that help you navigate, explore and get things done, wherever you are and users can touch or interact with map features clearly overlaid on your view of the world.
 
-Our APIs, SDKs, and live updating map data available for [238 nations](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) give developer-friendly, easy-to-integrate plugins to add capabilities like intelligent
+Our APIs, SDKs, and live updating map data available for [200+ nations](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) give developer-friendly, easy-to-integrate plugins to add capabilities like intelligent
 search and routes on map, to your web or mobile applications.
 
 
