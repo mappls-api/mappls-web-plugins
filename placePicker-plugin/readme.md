@@ -1,15 +1,21 @@
-![Mappls APIs](https://about.mappls.com/images/mappls-b-logo.svg)
+[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
 # Place Picker Plugin for Mappls Web Maps
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
-Powered with India's most comprehensive and robust mapping functionalities.
-**Now Available**  for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
+Powered with India's most comprehensive and robust mapping functionalities. Now Available for [200+ nations and territories](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) accross the world.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (https://apis.mappls.com/console/) in the sample code for interactive map development. 
+## Getting Access
 
-2. The sample code is provided to help you understand the very basic functionality of Mappls APIs. 
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+
+1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+    - This APIs follow OAuth2 based security.
+    - `Access Token` can be generated using Token Generation API.
+    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
+    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Place Picker Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) 
 
 ## Document Version History
 
@@ -44,7 +50,7 @@ For detailed understanding of the plugin, Let’s get started!
 
 Adding the Nearby Search plugin in the script
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{token-OR-JWT-key}/map_sdk_plugins?v=3.0&libraries=placePicker"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=placePicker"></script>
 ```
 
 ### 1. Initializing the Place Picker plugin
@@ -56,19 +62,19 @@ Adding the Nearby Search plugin in the script
 ```js
 /*Place Picker plugin initialization*/
 var options=
-    {
-        map:map,
-        /*
-        location:{lat:28.8787,lng:77.08888}, //to open that location on map on initailization
-        closeBtn:true,
-	geolocation:false,
-        closeBtn_callback:closeBtn_callback,
-        search:true,
-        topText:'Location Search',
-        pinImage:'pin.png', //custom pin image
-        pinHeight:40
-        */
-    };
+{
+    map:map,
+    /*
+    location:{lat:28.8787,lng:77.08888}, //to open that location on map on initailization
+    closeBtn:true,
+    geolocation:false,
+    closeBtn_callback:closeBtn_callback,
+    search:true,
+    topText:'Location Search',
+    pinImage:'pin.png', //custom pin image
+    pinHeight:40
+    */
+};
 mappls.placePicker(options, callback);
 ```
 
@@ -161,31 +167,33 @@ obj.getLocation();
 That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
 
+<br>
+
 For any queries and support, please contact: 
 
-<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
-
+[<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
-[Support](https://www.mapmyindia.com/api/index.php#f_cont)
+[Support](https://about.mappls.com/contact/)
 Need support? contact us!
 
 <br></br>
+<br></br>
 
-[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](http://www.mapmyindia.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia) 
-
-
-
-[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
+[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mappls-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](https://about.mappls.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/Mappls-api)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia) 
 
 
 
+[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/Mapplsofficial)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/mappls)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mappls/)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/channel/UCAWvWsh-dZLLeUU7_J9HiOA)
 
-<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
-<div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
+
+
+<div align="center">@ Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
+
+<div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
 

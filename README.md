@@ -1,21 +1,21 @@
-![MapmyIndia APIs](https://about.mappls.com/images/mappls-b-logo.svg)
+[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
-# mappls-web-plugins
-Mappls Web plugins is a JavaScript library for interactive maps provided by Mappls. This library is compatible with both our Web SDKs - Vector Maps &amp; our legacy Raster Maps.
+# Mappls Web Plugins
+Mappls Web plugins is a JavaScript library for interactive maps provided by Mappls. This library is compatible with both our Web SDKs - Vector Maps & our legacy Raster Maps.
 
 
-**MAPPLS** will be there in every step of the way, building new tools that help you navigate, explore and get things done, wherever you are and users can touch or interact with map features clearly overlaid on your view of the world.
+`MAPPLS` will be there in every step of the way, building new tools that help you navigate, explore and get things done, wherever you are and users can touch or interact with map features clearly overlaid on your view of the world.
 
-Our APIs, SDKs, and live updating map data available for [200+ nations](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) give developer-friendly, easy-to-integrate plugins to add capabilities like intelligent
+Our APIs, SDKs, and live updating map data available for [200+ nations and territories](https://github.com/MapmyIndia/mapmyindia-rest-api/blob/master/docs/countryISO.md) give developer-friendly, easy-to-integrate plugins to add capabilities like intelligent
 search and routes on map, to your web or mobile applications.
 
 
 
 You can get your api key to be used in this document here: [https://apis.mappls.com/console/](https://apis.mappls.com/console/)
 
-# Available plugins :
+# Available plugins
 
-## **[placeSearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/placeSearch-plugin)**
+## [Place Search](https://github.com/mappls-api/mappls-web-plugins/tree/main/placeSearch-plugin)
 
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/place_search.JPG)
@@ -31,7 +31,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
  - Available with many inbuilt configurations     [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin)
 
 
-## **[placePicker](https://github.com/mappls-api/mappls-web-plugins/tree/main/placePicker-plugin)**
+## [Place Picker](https://github.com/mappls-api/mappls-web-plugins/tree/main/placePicker-plugin)
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/place_picker.JPG )
 
@@ -43,7 +43,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 - Available with many inbuilt configurations.
 [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin)
 
-## **[nearbySearch](https://github.com/mappls-api/mappls-web-plugins/tree/main/nearbySearch-plugin)**
+## [Nearby Search](https://github.com/mappls-api/mappls-web-plugins/tree/main/nearbySearch-plugin)
 
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/nearby.JPG )
@@ -60,7 +60,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
    -  Available with many inbuilt configurations which makes using this plugin more and more reliable. [Read More](https://about.mappls.com/api/web-sdk/vector-plugin-example/Nearbysearch/mappls-nearbysearch-plugin)
 
-## **[Direction-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/directions-plugin)**
+## [Directions Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/directions-plugin)
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/Direction.JPG)
 
@@ -92,41 +92,43 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/Direction_events%20along%20route.JPG)   
 
-## **[marker-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/marker-plugin)**
- A simple plugin to render places on map as point markers. The Marker plugin for Mappls Web Map JS library is provided as a means to enable rendering of searched Places via eLoc as markers top of Mappls Maps. [Read more](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin)
+## [Marker Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/marker-plugin)
+ A simple plugin to render places on map as point markers. The Marker plugin for Mappls Web Map JS library is provided as a means to enable rendering of searched Places via Mappls PIN (eLoc) as markers on top of Mappls Maps. [Read more](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin)
 
-## **[getDistance-Method](https://github.com/mappls-api/mappls-web-plugins/tree/main/getDistance%20Method)**
+## [getDistance Method](https://github.com/mappls-api/mappls-web-plugins/tree/main/getDistance%20Method)
 This method, offered by Mappls Web Plugins, computes the routable distance and duration between a set of source/primary positions and a list of all supplied secondary positions using two mode of route calculation i.e. optimal OR shortest.
 
-## **[eLoc-Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin)**
+## [Place Detail Plugin](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin)
 A simple plugin / widget to render details of a particular place. The Place Details plugin for Mappls Web Map JS library is provided as a means to enable rendering of Mappls Places on Mappls Maps. [Read more](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placedetails/mappls-placedetails-plugin)
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/place_detail.JPG)
 
+<br>
+
 For any queries and support, please contact: 
 
-<img src="https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite"  width="500" height="200" />
-
+[<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
-[Support](https://www.mapmyindia.com/api/index.php#f_cont)
+[Support](https://about.mappls.com/contact/)
 Need support? contact us!
 
 <br></br>
+<br></br>
 
-[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](http://www.mapmyindia.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia) 
-
-
-
-[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
+[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mappls-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](https://about.mappls.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/Mappls-api)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia) 
 
 
 
+[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/Mapplsofficial)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/mappls)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mappls/)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/channel/UCAWvWsh-dZLLeUU7_J9HiOA)
 
-<div align="center">© Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
 
-<div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
+
+
+<div align="center">@ Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
+
+<div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
