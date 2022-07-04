@@ -1,4 +1,4 @@
-[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
 # DigitalSky Airspace Layers
 
@@ -19,7 +19,6 @@ We're helping ANY website or app developer to easily integrate this information,
 ## Document Version History
 | Version | Last Updated | Author | Release Note |
 | --- | --- | --- | --- |
-
 | 2.0 | 04 July 2021 | Mamta Sharma([MS](https://github.com/mamtasharma117)) | Initial Commit |
 
 <br>
