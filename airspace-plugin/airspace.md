@@ -58,7 +58,7 @@ We're helping ANY website or app developer to easily integrate this information,
 
 4. #### Step4
 
-    Below refered code will load the widget directly on the map. It will show 4 layers for Yellow (based on )and Red zones for Drones including a layers showing India International Boundary.[See live Demo](livedemo)
+    Below refered code will load the widget directly on the map. It will show 4 layers for Yellow (based on )and Red zones for Drones including a layers showing India International Boundary.[See live Demo](https://about.mappls.com/api/web-sdk/vector-plugin-example/Airspace/mappls-airspace-plugin)
 
     Yellow zone is the airspace above 400 feet in a designated green zone; above 200 feet in the area located between 8-12 km from the perimeter of an operational airport and above ground in the area located between 5-8 km from the perimeter of an operational airport
 
