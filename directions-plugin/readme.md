@@ -181,7 +181,8 @@ mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 34. `activeStrokeWidth` : To assign width of the route. Default value is 7.
 35. `callback`: (function). To get callback data after route plotted.
 36. `routeIndex`: (function) - To get the route index number and route name(if present).
-37. `collapse` : To minimise the entire direction plugin in left direction. _Available only for Top left position_
+37. `collapse` : To minimise the entire direction plugin in left direction. _Available only for Top left position_. Default is false. 
+    This parameter is also available in form of method in callback function. 
 
 
 ## Additional Parameter - alongTheRoute
