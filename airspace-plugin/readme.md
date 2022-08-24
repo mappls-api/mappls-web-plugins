@@ -20,7 +20,7 @@ We're helping ANY website or app developer to easily integrate this information,
 ## Document Version History
 | Version | Last Updated | Author | Release Note |
 | --- | --- | --- | --- |
-| 2.0 | 04 July 2021 | Mamta Sharma([MS](https://github.com/mamtasharma117)) | Initial Commit |
+| 3.0 | 04 July 2022 | Mamta Sharma([MS](https://github.com/mamtasharma117)) | Initial Commit |
 
 <br>
 
