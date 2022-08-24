@@ -27,7 +27,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 
 ## Introduction to Directions Plugin
 
-This plugin, offered by Mappls Places & Directions SDK for Web, uses integrated places searches for directions for several modes of transportation, including driving, biking and walking.
+This plugin, offered by Mappls Plugins for Web, uses integrated places searches for directions for several modes of transportation, including driving, biking and walking.
 
 The plugin offers the following basic functionalities:
 
