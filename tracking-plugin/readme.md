@@ -1,8 +1,7 @@
 [<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
 
-
-# Mappls Route Events Summary Plugin 
+# Mappls Tracking Plugin 
 
 **Easy To Integrate Routing APIs & Map SDKs For Web Applications**
 
@@ -15,11 +14,20 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 | Version | Last Updated  | Author                                                        |Remarks
 | ------- | ------------- | ------------------------------------------------------------- |-------------- |
-| 3.0  | 27 Oct 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
+| 3.0  | 27 Aug 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
 
 ## Introduction
 
-This plugin, offered by Mappls plugins for Web, with the help Mappls Rest API response dependency, provide the route events for the selected route.
+This plugin, offered by Mappls plugins for Web, allows one to track the path traveled.
+
+Features:
+
+ 1. Uses Mappls map 
+ 2. Search for the destination place using Mappls API 
+ 3. Route from source (current position) to destination. 
+ 4. Custom Map controls and animation 
+ 5. Live tracking user position and traveled coordinates
+
 
 This feature is also available inbuilt with Mappls Direction Plugin. For details, please contact apisupport@mapmyindia.com.
 
@@ -32,7 +40,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
     - `Access Token` can be generated using Token Generation API.
     - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
     - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-event-alongtheroute-direction-plugin)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-tracking-direction-plugin)
 
 ## Implementation
 
@@ -40,86 +48,50 @@ Before using the Plugin in the your solution, please ensure that the related acc
 ### Script URL
 
 ```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=routesummary"></script>
+<script src="https://apis.mapmyindia.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=direction"></script>
 ```
 
 ## Method
 
-`mappls.routeSummary()`
+`direction_obj.tracking()`
 
 ## Properties
 
 ### Mandatory Parameters
 
-  - map(object): vector map or raster map object from respective Mappls Map SDKs.
-  - routeId (String) : routeId, Provide routeId if users needs to get all routes reports summary.
+  - `map(object)`: vector map or raster map object from respective Mappls Map SDKs.
+- `location` : current location . For eg -  28.63124010064198,77.46734619140625
 
 ### Optional Parameters
 
-
- - Index (String) : routeIdx, Provide routeIdx if user needs routes reports for a selected route only Otherwise returns events for all suggested routes.
-
- - nodeId (String) : nodeId, nodeId of the Route.
-
- - categories (String) : Optional, categories (comma(,) separated String).
-
- - isGroup (Integer) : sGroup, Set to 1, if user needs parentCategory wise grouped data.
+- `label` : to label the curent position.
+- `icon` : to show custom marker. Supports PNG format as of now.
+- `heading` : To control the rotation of the marker as per the route direction.For example id you are using a car icon would rotate as per the route direction other wise it would move straight . Default is true.
+- `reRoute` : To refresh the route as per the curent location. This means the route will change as per the current location. If kept false the same route will be displayed. Default is true.
+- `fitbounds` : Allowing this would fit the map in the view bound.Default is true.
+- `animationSpeed` : Minumum breakage between the two received locations. For example `animationSpeed` : 5 means if the location received are 100 meters apart the animation would appear at every 5 meters. This parameter would decide the smoothness of the animation appearing on the screen.
 
 
+ 
 ## Example
 
 
  ```js
-mappls.routeSummary({
-            map:map,
-            routeId:routeId,
-            index:0 , 
-            categories:"",
-            nodeId:"",
-            isGroup:0
+mappls.direction({
+            direction.tracking({
+                            location: 28.63124010064198,77.46734619140625,
+                            label:'current location',
+                            icon:"../img/mkr_start.png",
+                            heading: false,
+                            reRoute: true, 
+                            fitBounds:false,
+                            animationSpeed:5,
+                            
         },
         function(data){
             console.log(data);
         });
  ```
-
-## Sample Implementation
-
-```html
-<html>
-   <head>
-      <title>Mappls Plugin - Route Events Summary</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="desciption" content="Mappls Route Report Summary Plugin">
-      <script src="https://apis.mapmyindia.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=routesummary"></script>
-      <style>
-         body{margin: 0}
-         #map{
-         width: 100%; height: 100vh;margin:0;padding: 0;
-         }
-      </style>
-   </head>
-   <body>
-      <div id="map"></div>
-      <script>
-         /*Map Initialization*/
-          var map = new mappls.Map('map', {center: [28.62, 77.09], zoom: 15, search: false});
-          
-          /* RouteReport plugin initialization*/
-           mappls.routeSummary({
-                map:map,
-                routeId:routeId,
-                index:0 
-        },
-        function(data){
-            console.log(data);
-        });
-
-      </script>
-   </body>
-</html>
-```
-
 
 
 <br>
@@ -127,9 +99,9 @@ That's All !
 
 For any queries and support, please contact:
 
+
 [<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
-
 
 ![](https://www.mapmyindia.com/api/img/icons/support.png)
 [Support](https://www.mapmyindia.com/api/index.php#f_cont)
