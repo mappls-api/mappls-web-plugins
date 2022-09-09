@@ -44,7 +44,7 @@ For detailed understanding, Let’s get started!
 
 Visit the following link for visiting the live demo:
 
-[LIVE DEMO](https://www.mapmyindia.com/api/advanced-maps/doc/sample/mapmyindia-maps-distance-matrix-plugin)
+[LIVE DEMO](https://about.mappls.com/api/web-sdk/vector-plugin-example/Distance/mappls-default-getdistance-plugin)
 
 
 ## Implementation
