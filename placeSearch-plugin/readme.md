@@ -111,6 +111,8 @@ new mappls.search(document.getElementById("auto"),placeOptions,callback);
     - `clearButton` : clear the value of input box. Default is true.
 2. `callback`: callback to get results/error after call or selection.
 3. `blank_callback` : callback when user clicks the cross button or erase the value of input box.
+4. `searchChars` : number of characters required to start search. e.g  `searchChars`:2
+5. `region` : To specify the region for various api response.e.g  `region` : "USA"
 
 <br>
 
