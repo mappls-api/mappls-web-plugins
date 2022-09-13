@@ -95,6 +95,8 @@ mappls.placePicker(options, callback);
     - `topText`: The banner text to show at the top as title of the Place Picker plugin. Default is `Place Picker`.
     - `pinImage`: (URL) The PIN icon on the map. 
     - `pinHeight`: (number). To adjust the placement of the PIN icon on the map.
+    - `searchChars` : number of characters required to start search. e.g searchChars:2
+    - `region` : To specify the region for various api response.e.g region : "USA"
 <br>
 
 ### 2. Calling Mappls Place Picker for programmatically fixed text
