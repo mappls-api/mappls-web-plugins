@@ -139,7 +139,9 @@ OR
 12. `sortBy`: (string)Used to sort the nearby search results.
 13. `page`: (number): to request another page of results if available.
 14. `pod`: (string): to filter to a certain type of results.
-15. `callback_click`: (method): a method that will be called when user clicks on any listing. The action returns the eLoc of the selected place.
+15. `searchChars` : number of characters required to start search. e.g searchChars:2
+16. `region` : To specify the region for various api response.e.g region : "USA"
+17. `callback_click`: (method): a method that will be called when user clicks on any listing. The action returns the eLoc of the selected place.
 
 <br>
 
