@@ -183,7 +183,7 @@ mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 36. `routeIndex`: (function) - To get the route index number and route name(if present).
 37. `collapse` : To minimise the entire direction plugin in left direction. _Available only for Top left position_. Default is false. 
     This parameter is also available in form of method in callback function. 
-38. `connector` : To show the connecting line with start and end location with the route.
+38. `connector` : To show the connecting line with start and end location with the route. Default is false.
 
 
 ## Additional Parameter - alongTheRoute
