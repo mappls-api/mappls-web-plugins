@@ -182,7 +182,10 @@ mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
 35. `callback`: (function). To get callback data after route plotted.
 36. `routeIndex`: (function) - To get the route index number and route name(if present).
 37. `collapse` : To minimise the entire direction plugin in left direction. _Available only for Top left position_. Default is false. 
-    This parameter is also available in form of method in callback function. 
+    This parameter is also available in form of method in callback function. Refer below to use the function
+       ```js
+       collapse:function(data){console.log(data);},
+       ```
 38. `connector` : To show the connecting line with start and end location with the route. Default is false.
 
 
