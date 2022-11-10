@@ -69,7 +69,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 - `heading` : To control the rotation of the marker as per the route direction.For example if you are using a car icon, it would rotate as per the route direction otherwise it would move straight . Default is true.
 - `reRoute` : To refresh the route as per the current location. This means the route will change as per the current location. If kept false the same route will be displayed. Default is true.
 - `fitbounds` : Allowing this would fit the map in the view bound.Default is true.
-- `animationSpeed` : Minimum breakage between the two received locations. For example `animationSpeed` : 5 means if the location received are 100 meters apart the animation would appear at every 5 meters. This parameter would decide the smoothness of the animation appearing on the screen.
+- `animationSpeed` : Minimum breakage between the two received locations. For example `animationSpeed` : 5 means if the location received is 100 meters apart the animation would appear at every 5 meters. This parameter would decide the smoothness of the animation appearing on the screen.
 
 
  
