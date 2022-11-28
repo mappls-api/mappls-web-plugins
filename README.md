@@ -83,7 +83,7 @@ You can get your api key to be used in this document here: [https://apis.mappls.
 
    -  Drag Locations to get more and more routes.
 
-   - Tracking - Live location visualization and display routes with current location. [Read more](https://about.mappls.com/api/api_doc_assets/Direction_poi%20along_route.JPG)
+   - Tracking - Live location visualization and display routes with current location. [Read more](https://github.com/mappls-api/mappls-web-plugins/tree/main/tracking-plugin)
 
 ![Mappls APIs](https://about.mappls.com/api/api_doc_assets/Direction_tracking.JPG)
 
