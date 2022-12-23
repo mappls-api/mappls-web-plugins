@@ -209,7 +209,13 @@ mappls.direction({map:map,start:"28.545,77.545",end:{label:'India Gate, Delhi',g
         - `label`: 'Restaurants' _the name  user puts to show the category. For Eg: "Restaurants"_
 
     - `page`: 1,  _// Used for pagination, Default is 1_
-    - `poicallback`: to get data of alongtheroute pois.
+    - `poicallback`: to get data of alongtheroute pois. 
+    
+        If the user does not want to use the UI - PoiAlong the route , then he can use below additional paremeters to get the API response with other parameters of direction Plugin.
+
+        - `catCode` :'FINATM', to define the catagory for result
+        - `poicallback`: function (data) 
+            { console.log(data); }
 
  Refer to the Code Snippet if the you need to configure the default options.
  
