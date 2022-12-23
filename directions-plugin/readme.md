@@ -9,9 +9,10 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 ## Document Version History
 
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
+| Version | Last Updated | Author |Remarks |
+| ---- | ---- | ---- | ---- |
 | 3.0 | 27 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
+| 3.1 | 23 Dec 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |Added support for poi long the route results |
 
 
 ## Getting Access
