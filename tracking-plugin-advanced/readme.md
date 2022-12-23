@@ -14,7 +14,7 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 | Version | Last Updated  | Author                                                        |Remarks
 | ------- | ------------- | ------------------------------------------------------------- |-------------- |
-| 3.0  | 27 Aug 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
+| 1.0  | 15 Dec 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
 
 ## Introduction
 
