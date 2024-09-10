@@ -31,30 +31,70 @@ Before using the Plugin in the your solution, please ensure that the related acc
     - `Access Token` can be generated using Token Generation API.
     - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
     - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin Advanced. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
 
 ## Implementation
 
 
 ### Initialize the Plugin
 
- Step 1: initialize plugin SDK and add (& libraries=tracking) in script url
+ #### Step 1: Initialize plugin SDK and add (& libraries=tracking) in the url
 
 ```js 
 <script src="https://api.mappls.com/advancedmaps/api/<token>/map_sdk_plugins?v=3.0&libraries=tracking"></script> 
 ```
 
+ #### Step 2 : Add map under div container in your project
 
+ ```js
+   <div id="map"></div>
+ ```
 
-### Methods
+#### Step 3 : Initialize Map 
 
-- `mappls.tracking()`
-- `data.settrackfit(true/false);` // To set route fitbounds true or false  // default true
-- `data.setccpContent(“content”);` // If you want to set icon
-- `data.setLineHide(true/false);` // for hide or showing line
+```js
+map = new mappls.Map('map', {
+    center: [28.62988695137534, 77.4224575062193],
+                zoom: 12
+         })
 
-## Properties
+```
 
+#### Step 4 : Add tracking option in mappls.tracking() method
+
+```js
+var tracking_option = {
+    map: map, // Required mapObject
+    start: [{ geoposition: "28.63124010064198,77.46734619140625" }, // Required
+    via:[{geoposition:"28.63124010064198,77.5541"},
+           {geoposition:"28.631541442089226,77.4541"}], // optional
+    end: { geoposition: "28.631541442089226,77.37808227539064" }, // Required
+    resource:"route_eta", // optional
+profile: "driving", // optional
+    fitBounds: true,  // optional
+    connector:true, // default false /* to connect the path to end position */,
+connectorRouteColor:"gray",   /* connected path route color for end position */
+connectorRouteDash:[2, 2],   /* connected path route in dash array for end position */
+    ccpIcon:'location.png',  // optional
+    ccpIconWidth:70, // optional
+    strokeWidth:7, // optional
+    routeColor:"blue", // optional 
+dasharray:[2,2], // default None and optional 
+sPopup:"start text", // optional (for start icon popup)
+cPopup:"<h1>current popup</h1>" // optional you can also set html in current icon popup but only in current Icon not start and end
+dPopup:"end text", // optional (for end icon popup)
+start_icon: {  // optional
+        url: 'location.png',
+        width: 40, 
+        height: 40 
+    },
+    end_icon: {  // optional
+        url: 'location.png',
+        width: 40, 
+        height: 40 
+    }
+}
+```
 ### Mandatory Parameters
 
   - `map(object)`: vector map or raster map object from respective Mappls Map SDKs.
@@ -84,6 +124,92 @@ For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.63154144208
                  width: 40, 
                  height: 40 
                     },Supports PNG format as of now.
+
+
+#### Step 5: Method call  for Tracking Plugin
+
+```js
+// With tracking option as a variable
+
+mappls.tracking(tracking_option, function(data) {
+                        console.log(data);
+                        data1 = data;
+});
+
+```
+```js
+// Or Without tracking option as a variable
+mappls.tracking({
+    map: map,
+    start: {
+        geoposition: "28.63124010064198,77.46734619140625"
+    },
+    end: {
+        geoposition: "28.631541442089226,77.37808227539064"
+    },
+    fitBounds: true,
+    ccpIconWidth: 70,
+    strokeWidth: 7,
+    routeColor: "blue",
+    /* sPopup:"Start",
+     cPopup:'<h3>Current Popup</h3>',
+     dPopup:"End" */
+}
+tracking_plugin = mappls.tracking(tracking_option, function(data) {
+    console.log(data);
+    trackingCallbackData = data;
+});
+}
+, function(data) {
+    console.log(data);
+    trackingCallbackData = data;
+});
+```
+##### Tracking callbacks
+
+- `trackingCallbackData.settrackfit(true/false);`  (default is true, fitbounds the track)
+- `trackingCallbackData.setccpContent(“content”);` (set popup on start)
+- `trackingCallbackData.setLineHide(true/false);`  (to make path invisible)
+
+### Methods
+
+`mappls.tracking()`
+
+
+#### Step 6: Method to inject User data
+
+```js
+     trackingCallbackData.trackingCall({
+       location: user, // Required
+       reRoute: true, // default true or optional
+       heading: true, // default true
+       mapCenter: false, // default false
+       polylineRefresh: true /* it refreshes the covered route */,
+       buffer: 50, // default 25
+       etaRefresh: true /* to get distance and duration in callback */,
+       latentViz: false /* when clicked on map, icon first goes to clicked path with following route  */,
+       delay: 3000, // default 5000
+       fitBounds: true, // default true
+       fitboundsOptions: {
+         padding: 80,
+       },
+       callback: function (datap) {
+         console.log(datap);
+       },
+     });
+```
+
+
+## Properties
+
+### Mandatory Parameters
+
+- `map(object)`: vector map or raster map object from respective Mappls Map SDKs.
+- `start` : route start location . For eg -  { geoposition: "28.63124010064198,77.46734619140625" }
+- `end` : route end location . For eg -   { geoposition: "28.631541442089226,77.37808227539064" }
+
+### Optional Parameters
+
 - `reRoute` : To refresh the route as per the current location. This means the route will change as per the current location. If kept false the same route will be displayed. Default is true.
 - `heading` : To control the rotation of the marker as per the route direction.For example if you are using a car icon, it would rotate as per the route direction otherwise it would move straight . Default is true.
 - `Buffer` :50,  The distance defined for call reroute for the ptovided current location. 
@@ -98,28 +224,90 @@ For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.63154144208
 - `etaRefresh:false, // default false`
 
 
-## Example
-
+## Implementation Example
 
  ```js
- mappls.tracking(tracking_option, function (data) { // call Once 
-data.trackingCall({ // when user location change then reCall ( trackingCall() )
-location: user, // Required User Current Location
-reRoute: true, // optional default true
-Heading:true, // optional default true
-Buffer:50,  // default 25 meter
-delay: 5000, // default 5000 millisecond
-polylineRefresh: true, // default true
-latentViz:true, // default false
-etaRefresh:false, // default false
-fitBounds:true, // optional default true
-mapCenter:true, // optional default false(animate with map center) 
-fitboundsOptions:{padding:80}, // optional
-callback:function(data){  // optional
-console.log(data); // getting {“status”:”ok”} or {“status”:”jump”}
-}
-});
-});
+
+  <html>
+  <head>
+    <title>Tracking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tracking">
+
+        <script src="https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk?layer=vector&v=3.0&callback=initMap1"></script>
+          <script src="https://apis.mappls.com/advancedmaps/api/<token>/map_sdk_plugins?v=3.0"></script>
+          <style>
+        body {
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id="map"></div>
+                <script>
+            /*Map Initialization*/
+            var map;
+
+            function initMap1() {
+                map = new mappls.Map('map', {
+                    center: [28.62988695137534, 77.4224575062193],
+                    zoom: 12
+                });
+                map.addListener('load', function() {
+                    /*tracking plugin initialization*/
+                    var tracking_option = {
+                        map: map,
+                        start: {
+                            geoposition: "28.63124010064198,77.46734619140625"
+                        },
+                        end: {
+                            geoposition: "28.631541442089226,77.37808227539064"
+                        },
+                        fitBounds: true,
+                        ccpIconWidth: 70,
+                        strokeWidth: 7,
+                        routeColor: "blue",
+                        /* sPopup:"Start",
+                         cPopup:'<h3>Current Popup</h3>',
+                         dPopup:"End" */
+                    }
+                    tracking_plugin = mappls.tracking(tracking_option, function(data) {
+                        console.log(data);
+                        data1 = data;
+                    });
+                });
+
+                map.on('click', function(e) {
+                    var user = [e.lngLat.lng, e.lngLat.lat];
+                    data1.trackingCall({
+                        location: user,
+                        reRoute: true,
+                        heading: true,
+                        mapCenter: false,
+                        buffer: 50,
+                        delay: 3000,
+                        fitBounds: false,
+                        fitboundsOptions: {
+                            padding: 80
+                        },
+                        callback: function(data) {
+                            console.log(data)
+                        }
+                    });
+                });
+            }
+        </script>
+        </body>
+  </html>
+
  ```
 
 
