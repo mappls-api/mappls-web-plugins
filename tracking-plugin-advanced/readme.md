@@ -15,6 +15,7 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 | Version | Last Updated  | Author                                                        |Remarks
 | ------- | ------------- | ------------------------------------------------------------- |-------------- |
 | 1.0  | 15 Dec 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
+| 1.1  | 10 Sep 2024 | MapmyIndia API Team ([PK](https://github.com/prabhjot729)) | Document Update
 
 ## Introduction
 
@@ -35,15 +36,22 @@ Before using the Plugin in the your solution, please ensure that the related acc
 ## Implementation
 
 
-### Script URL
+### Initialize the Plugin
 
-```js
-<script src="https://apis.mapmyindia.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=tracking"></script>
+ Step 1: initialize plugin SDK and add (& libraries=tracking) in script url
+
+```js 
+<script src="https://api.mappls.com/advancedmaps/api/<token>/map_sdk_plugins?v=3.0&libraries=tracking"></script> 
 ```
 
-## Method
+
+
+### Methods
 
 `mappls.tracking()`
+`data.settrackfit(true/false);` // To set route fitbounds true or false  // default true
+`data.setccpContent(“content”);` // If you want to set icon
+`data.setLineHide(true/false);` // for hide or showing line
 
 ## Properties
 
@@ -82,24 +90,36 @@ For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.63154144208
 - `fitbounds` : Allowing this would fit the map in the view bound.Default is true.
 - `mapCenter` :true, keeps the current on the center of the map.
 - `fitboundsOptions`:{padding:80}, // optional
+- `Connector` : true, from the last navigable point on road to actual input destination corordinate // default false
+- `ConnectorRouteColor` : "gray",
+- `ConnectorRouteDash` : [2, 2], //[Length, Space of the route dash]
+- `polylineRefresh: true, // default true`
+- `latentViz:true, // default false`
+- `etaRefresh:false, // default false`
 
 
- 
 ## Example
 
 
  ```js
-mappls.tracking(tracking_option, function (data) { 
-            data.trackingCall({ // when user location change then reCall ( trackingCall() )
-            location: user,
-            Heading:true, 
-            Buffer:50,
-            fitBounds:true,
-            mapCenter:true, 
-            fitboundsOptions:{padding:80}
-            
+ mappls.tracking(tracking_option, function (data) { // call Once 
+data.trackingCall({ // when user location change then reCall ( trackingCall() )
+location: user, // Required User Current Location
+reRoute: true, // optional default true
+Heading:true, // optional default true
+Buffer:50,  // default 25 meter
+delay: 5000, // default 5000 millisecond
+polylineRefresh: true, // default true
+latentViz:true, // default false
+etaRefresh:false, // default false
+fitBounds:true, // optional default true
+mapCenter:true, // optional default false(animate with map center) 
+fitboundsOptions:{padding:80}, // optional
+callback:function(data){  // optional
+console.log(data); // getting {“status”:”ok”} or {“status”:”jump”}
 }
-
+});
+});
  ```
 
 
