@@ -48,10 +48,10 @@ Before using the Plugin in the your solution, please ensure that the related acc
 
 ### Methods
 
-`mappls.tracking()`
-`data.settrackfit(true/false);` // To set route fitbounds true or false  // default true
-`data.setccpContent(“content”);` // If you want to set icon
-`data.setLineHide(true/false);` // for hide or showing line
+- `mappls.tracking()`
+- `data.settrackfit(true/false);` // To set route fitbounds true or false  // default true
+- `data.setccpContent(“content”);` // If you want to set icon
+- `data.setLineHide(true/false);` // for hide or showing line
 
 ## Properties
 
