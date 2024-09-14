@@ -86,12 +86,16 @@ dPopup:"end text", // optional (for end icon popup)
 start_icon: {  // optional
         url: 'location.png',
         width: 40, 
-        height: 40 
+        height: 40,
+        popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+        offset:[0, -18]
     },
     end_icon: {  // optional
         url: 'location.png',
         width: 40, 
-        height: 40 
+        height: 40,
+        popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+        offset:[0, -18]
     }
 }
 ```
@@ -118,12 +122,19 @@ For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.63154144208
 - `dPopup` :"end text", available for end icon popup
 - `start_icon` : {   url: 'location.png',
                         width: 40, 
-                        height: 40 
-                    }, Supports PNG format as of now.
+                        height: 40,
+                        popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                        offset:[0, -18] 
+                    }, //Supports PNG format as of now.
 - `end_icon` : { url: 'location.png',
                  width: 40, 
                  height: 40 
+                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                /* offset:[0, -18] */
                     },Supports PNG format as of now.
+- start_icon:false // if set as false then marker will not be visible
+- end_icon: false // if set as false then marker will not be visible
+
 
 
 #### Step 5: Method call  for Tracking Plugin
@@ -151,9 +162,9 @@ mappls.tracking({
     ccpIconWidth: 70,
     strokeWidth: 7,
     routeColor: "blue",
-    /* sPopup:"Start",
+    /*
      cPopup:'<h3>Current Popup</h3>',
-     dPopup:"End" */
+     */
 }
 tracking_plugin = mappls.tracking(tracking_option, function(data) {
     console.log(data);
@@ -189,6 +200,7 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
        etaRefresh: true /* to get distance and duration in callback */,
        latentViz: false /* when clicked on map, icon first goes to clicked path with following route  */,
        delay: 3000, // default 5000
+       fitCoverDistance:true, // default is false 
        fitBounds: true, // default true
        fitboundsOptions: {
          padding: 80,
@@ -275,9 +287,9 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
                         ccpIconWidth: 70,
                         strokeWidth: 7,
                         routeColor: "blue",
-                        /* sPopup:"Start",
-                         cPopup:'<h3>Current Popup</h3>',
-                         dPopup:"End" */
+                        /* 
+                        cPopup:'<h3>Current Popup</h3>',
+                         */
                     }
                     tracking_plugin = mappls.tracking(tracking_option, function(data) {
                         console.log(data);
