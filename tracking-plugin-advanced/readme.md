@@ -65,7 +65,7 @@ map = new mappls.Map('map', {
 ```js
 var tracking_option = {
     map: map, // Required mapObject
-    start: [{ geoposition: "28.63124010064198,77.46734619140625" }, // Required
+    start: { geoposition: "28.63124010064198,77.46734619140625" }, // Required
     via:[{geoposition:"28.63124010064198,77.5541"},
            {geoposition:"28.631541442089226,77.4541"}], // optional
     end: { geoposition: "28.631541442089226,77.37808227539064" }, // Required
@@ -109,31 +109,60 @@ start_icon: {  // optional
 
 - `Via` : via locations between the route
 For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.631541442089226,77.4541"}],
-- `resource` :"route_eta", To set the route resource. Default to "_route_eta_". 
--	`profile`: “driving”, To set the profile for the route. Default to "_driving_".
-- `fitBounds` : true,  // optional
-- `ccpIcon` :'location.png',  Supports PNG format as of now.
-- `ccpIconWidth` : 70, // optional
-- `strokeWidth` : 7, // optional
-- `routeColor` : "blue", // optional 
-- `dasharray`:[2,2], // default None and optional 
+- `resource` :"route_eta", To set the route resource. Default to "`route_eta`". 
+- `profile`: “driving”, To set the profile for the route. Default to "`driving`".
+- `fitBounds` (boolean): Whether to fit route and destination to map bound or not, default is `true`,  // optional
+- `ccpIcon` (string):'location.png',  Allows to set URL of current rider position icon; Supports PNG format as of now.
+- `ccpIconWidth` (integer): 70; signifies CCP icon's width, // optional
+- `ccpOffset` (x,y): [0,20]; //signifies icon's offset in x,y pixels in a div.
+- `strokeWidth` (integer): 7, // signifies width of the route polyline on the map; optional
+- `strokeOpacity` (integer): //signifies opacity of the route polyline. //optional; default is 1. Opacity values from 0 to 1.
+- `routeColor` (string): "blue", signifies polyline's color. // can take in hex codes as well; optional 
+- `dasharray`:[2,2], // default: none and optional; used to display route polyline as dashed polyline.
 - `sPopup` :”start text”, // optional (for start icon popup)
 - `cPopup` :”`<h1>current popup</h1>”`. To set html in current icon popup (_parameter available only for current location Icon_)
 - `dPopup` :"end text", available for end icon popup
-- `start_icon` : {   url: 'location.png',
-                        width: 40, 
-                        height: 40,
-                        popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
-                        offset:[0, -18] 
-                    }, //Supports PNG format as of now.
-- `end_icon` : { url: 'location.png',
-                 width: 40, 
-                 height: 40 
-                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
-                /* offset:[0, -18] */
-                    },Supports PNG format as of now.
-- start_icon:false // if set as false then marker will not be visible
-- end_icon: false // if set as false then marker will not be visible
+- `start_icon` : Supports PNG format as of now.
+    ```
+    {   url: 'location.png',
+        width: 40, 
+        height: 40,
+        popupOptions:
+            {
+                offset: {'bottom': [0, -20]}, 
+                openPopup:false 
+            },
+        offset:[0, -18] 
+    }, 
+    ```
+    - `start_icon`: `false` // if set as false then marker will not be visible
+- `end_icon` : Supports PNG format as of now.
+    ```
+    {   url: 'location.png',
+        width: 40, 
+        height: 40 
+        popupOptions:
+        {
+            offset: {'bottom': [0, -20]}, 
+            openPopup:false 
+        },
+        /* offset:[0, -18] */
+    },
+    ```
+    - `end_icon`: `false` // if set as false then marker will not be visible
+- `connector` : `true`, from the last navigable point on road to actual input destination coordinate // default `false`
+- `connectorRouteColor` : "gray", //can take in hex color codes.
+- `connectorOpacity`(integer): //signifies opacity of the connector polyline. //optional; default is 1. Opacity values from 0 to 1.
+- `connectorWidth`(integer): 7, // signifies width of the connector polyline on the map; optional
+- `connectorRouteDash` : [2, 2], //[Length, Space of the dashed segment from route end to destination coordinates]
+- `connectorVisible` (boolean): To show/hide connector; this is only applicable when curveLine is being used. //default is `true`.
+- `curveLine` (boolean): 
+- `curveLineColor` (string): "gray", signifies curve line's color. // can take in hex codes as well; optional 
+- `curveLineOpacity` (integer): //signifies opacity of the curve polyline. //optional; default is 1. Opacity values from 0 to 1.
+- `curveDasharray` : [2,2], // default: none and optional; used to display route polyline as dashed polyline.
+- `curveLineStrokeWeight` (integer): 7, // signifies width of the curve polyline on the map; optional
+- `curveLineFitbounds` (boolean): Whether to include curve line in map fit bound or not, default is `true`,  // optional
+
 
 
 
@@ -176,11 +205,27 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
     trackingCallbackData = data;
 });
 ```
-##### Tracking callbacks
+#### Tracking callbacks
 
-- `trackingCallbackData.settrackfit(true/false);`  (default is true, fitbounds the track)
+- `trackingCallbackData.settrackfit(true/false);`  (default is `true`, fitbounds the track)
 - `trackingCallbackData.setccpContent(“content”);` (set popup on start)
-- `trackingCallbackData.setLineHide(true/false);`  (to make path invisible)
+- DEPRECATED: `trackingCallbackData.setLineHide(true/false);`  (to make path invisible)
+- `trackingCallbackData.removeCurveLine();` // to remove curved polylines.
+- `trackingCallbackData.setLineVisible(true);` // to show/hide polyline on map.
+- `trackingCallbackData.getEta(function(data){console.log(data);})` //to fetch eta & distance from the plugin
+
+#### Recommendation: When you wish to switch between curved line and route line between source & destination
+
+##### Before rider picks up: 
+1. Show the Curved line.
+    - `curveLine:true`
+2. Hide the Route line.
+    - `strokeOpacity:0` and if `connector:true`, set `connectorVisible:false`
+
+##### After rider picks up: 
+1. Call `trackingCallBackData.removeCurveLine();` to remove the curved line.
+2. Call `trackingCallBackData.setLineVisible(true);` to set the route line to visible.
+
 
 ### Methods
 
@@ -202,6 +247,7 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
        delay: 3000, // default 5000
        fitCoverDistance:true, // default is false 
        fitBounds: true, // default true
+       smoothFitBounds: false, //default: false; other values: "slow"||"med"||"fast"
        fitboundsOptions: {
          padding: 80,
        },
@@ -210,30 +256,37 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
        },
      });
 ```
-
+> IMPORTANT NOTE: This method should NOT be called in any scenario of less than 3 seconds. For best results, call this method at-least once every 15 seconds. For long duration tracking, it is recommended to call this method more frequently than the period between gethering rider locations - polling frequency of your tracking; keeping above restrictions in mind.
 
 ## Properties
 
 ### Mandatory Parameters
 
-- `map(object)`: vector map or raster map object from respective Mappls Map SDKs.
-- `start` : route start location . For eg -  { geoposition: "28.63124010064198,77.46734619140625" }
-- `end` : route end location . For eg -   { geoposition: "28.631541442089226,77.37808227539064" }
+- `location` (array): Coordinate array as `[longitude,latitude]`
 
 ### Optional Parameters
 
-- `reRoute` : To refresh the route as per the current location. This means the route will change as per the current location. If kept false the same route will be displayed. Default is true.
-- `heading` : To control the rotation of the marker as per the route direction.For example if you are using a car icon, it would rotate as per the route direction otherwise it would move straight . Default is true.
-- `Buffer` :50,  The distance defined for call reroute for the ptovided current location. 
-- `fitbounds` : Allowing this would fit the map in the view bound.Default is true.
-- `mapCenter` :true, keeps the current on the center of the map.
-- `fitboundsOptions`:{padding:80}, // optional
-- `Connector` : true, from the last navigable point on road to actual input destination corordinate // default false
-- `ConnectorRouteColor` : "gray",
-- `ConnectorRouteDash` : [2, 2], //[Length, Space of the route dash]
-- `polylineRefresh: true, // default true`
-- `latentViz:true, // default false`
-- `etaRefresh:false, // default false`
+- `reRoute` (boolean): To refresh the route as per the current location. This means the route will change as per the current location. If kept false the same route will be displayed. Default is `true`.
+- `heading` (boolean): To control the rotation of the marker as per the route direction.For example if you are using a car icon, it would rotate as per the route direction otherwise it would move straight. Default is `true`.
+- `buffer` (integer):50,  The distance defined for call reroute for the provided current location. 
+- `fitBounds` (boolean): Allowing this would fit the map in the view bound. Default is `true`.
+- `mapCenter` (boolean):true, keeps the current on the center of the map.
+- `fitBoundsOptions`: add padding to the fitBounds, if fitBounds is set as `true`.
+    ```
+    fitBoundsOptions: 
+    {
+        padding:80
+    }, // optional
+    ```
+- `fitCoverDistance` (boolean): includes the last movement within the fitBounds call. //default is `true`
+- `polylineRefresh` (boolean): removes the covered route as the rider progresses. // default `true`
+- `latentViz` (boolean): Smooth visualization when rider suddenly jumps off-route. Incurs an additional routing call.// default `false`
+- `etaRefresh` (boolean):  updates the ETA if the route followed has not changed periodically to reflect the ever changing live traffic.// default `false`
+- `delay` (integer): miliseconds indicating within how much time each subsequent location movement animation is to be completed. Default is `3000` ms. 
+- `smoothFitBounds` (boolean or string): To enable/disable ultra-smooth fitbound automation that the widget performs with each animation - even with interpolated data. // default `false` with options to set it to "`slow`" OR "`med`" OR "`fast`"; wherein: 
+  - `slow` - fitbound action every 1 interpolated location.
+  - `med` - fitbound action every 3 interpolated location.
+  - `fast` - fitbound action every 5 interpolated location.
 
 
 ## Implementation Example
@@ -342,7 +395,7 @@ Need support? contact us!
 
 [<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
 
-<div align="center">@ Copyright 2020 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
+<div align="center">@ Copyright 2024 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
