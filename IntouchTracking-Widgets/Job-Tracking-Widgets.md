@@ -71,6 +71,15 @@ The data object may contain the following properties:
 - **lastdriverLocation (Object)**: Contains the last known location of the driver, with properties like latitude and longitude.
 
 
+## Methods
+
+```js
+trackingCallBackData.setLineVisible(true);
+```
+```js
+trackingCallBackData.removeCurveLine(); 
+```
+
 ## Usage Examples
 
 ### Initializing Tracking on Map Load
@@ -93,6 +102,12 @@ map.addListener('load', function () {
         start_icon: false,  // Don't show start icon
         connectorWidth: 2,  // Connector line width
         end_icon: true  // Show end icon
+        curveLine:true,  /* default false */
+        curveLineColor:"#333", /* default "#333" */
+        curveLineOpacity:1, /* default 1 */
+        curveDasharray:[2,2], /* default [2,2] for straight line use false */
+        curveLineStrokeWeight:2, /* default 4 */
+        curveLineFitbounds:true /* default false */
     };
 
     mappls.intouchTracking(trackingOptions, function (data) {
