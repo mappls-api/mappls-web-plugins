@@ -82,6 +82,11 @@ trackingCallBackData.removeCurveLine();
 
 ## Usage Examples
 
+### Load SDK
+```js
+<script> https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk_plugins?v=3.0&js=tracking </script>
+```
+
 ### Initializing Tracking on Map Load
 
 ```js
