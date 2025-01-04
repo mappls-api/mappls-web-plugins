@@ -84,7 +84,7 @@ trackingCallBackData.removeCurveLine();
 
 ### Load SDK
 ```js
-<script> https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk_plugins?v=3.0&js=tracking </script>
+<script src="https://apis.mappls.com/advancedmaps/api/cddd0e53-1ae4-43b8-a1ba-04a534140ae8/map_sdk_plugins?v=3.0&libraries=intouchTracking"></script>
 ```
 
 ### Initializing Tracking on Map Load
