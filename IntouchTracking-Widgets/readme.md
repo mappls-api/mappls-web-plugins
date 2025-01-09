@@ -1,5 +1,13 @@
 # Intouch Tracking Widget 
 
+**Easy To Integrate Routing APIs & Map SDKs For Web Applications**
+
+Powered with India's most comprehensive and robust mapping functionalities. Now Available for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
+
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development.
+2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs.
+
+
 ## Document Version History
 
 | Version | Remarks | Author |
@@ -10,6 +18,18 @@
 
 The mappls.intouchTracking is part of the Mappls SDK (formerly MapmyIndia) and is designed to provide real-time tracking and display of routes and activities on a map. This method supports job tracking functionality to visualize movement and journey progress on a map.
 This document provides an overview of how to use the mappls.intouchTracking function, including configuration options and code examples.
+
+
+## Getting Access
+
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+
+1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+    - This APIs follow OAuth2 based security.
+    - `Access Token` can be generated using Token Generation API.
+    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
+    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
 
 # Table of Contents
 
