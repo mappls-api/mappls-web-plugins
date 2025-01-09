@@ -3,6 +3,35 @@
 
 # Intouch Tracking Widget 
 
+**Easy To Integrate Routing APIs & Map SDKs For Web Applications**
+
+Powered with India's most comprehensive and robust mapping functionalities. Now Available for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
+
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://www.mapmyindia.com/api/dashboard) in the sample code for interactive map development.
+2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs.
+
+
+## Document Version History
+
+| Version | Remarks | Author |
+| ---- | ---- | ---- |
+| 1.0 | Document Update |SDK Product Team ([PK](https://github.com/prabhjot729/))|
+
+## Introduction 
+The mappls.intouchTracking is part of the Mappls SDK (formerly MapmyIndia) and is designed to provide real-time tracking and display of routes and activities on a map. This method supports job tracking functionality to visualize movement and journey progress on a map.
+This document provides an overview of how to use the mappls.intouchTracking function, including configuration options and code examples.
+
+## Getting Access
+
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+
+1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+    - This APIs follow OAuth2 based security.
+    - `Access Token` can be generated using Token Generation API.
+    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
+    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
+
 ## Document Version History
 
 | Version | Remarks | Author |
@@ -13,8 +42,13 @@
 
 - [Intouch Tracking Widget](#intouch-tracking-widget)
   - [Document Version History](#document-version-history)
-- [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
+  - [Getting Access](#getting-access)
+  - [Document Version History](#document-version-history-1)
+- [Table of Contents](#table-of-contents)
+- [Implementation](#implementation)
+    - [Load SDK](#load-sdk)
+    - [Initializing Tracking on Map Load](#initializing-tracking-on-map-load)
   - [Mandatory Parameters](#mandatory-parameters)
   - [Important Parameters](#important-parameters)
   - [Configuration Options (trackingOptions)](#configuration-options-trackingoptions)
@@ -24,16 +58,58 @@
         - [Before rider picks up:](#before-rider-picks-up)
         - [After rider picks up:](#after-rider-picks-up)
   - [Usage Examples](#usage-examples)
-    - [Load SDK](#load-sdk)
-    - [Initializing Tracking on Map Load](#initializing-tracking-on-map-load)
+    - [Initializing Tracking on Map Load](#initializing-tracking-on-map-load-1)
     - [Starting the Tracking Session](#starting-the-tracking-session)
     - [Ending the Tracking Session](#ending-the-tracking-session)
     - [Re-centering the Map Based Current Tracking Data](#re-centering-the-map-based-current-tracking-data)
     - [Error Handling](#error-handling)
 
-## Introduction 
-The mappls.intouchTracking is part of the Mappls SDK (formerly MapmyIndia) and is designed to provide real-time tracking and display of routes and activities on a map. This method supports job tracking functionality to visualize movement and journey progress on a map.
-This document provides an overview of how to use the mappls.intouchTracking function, including configuration options and code examples.
+
+# Implementation
+
+### Load SDK
+```js
+<script src="https://apis.mappls.com/advancedmaps/api/cddd0e53-1ae4-43b8-a1ba-04a534140ae8/map_sdk_plugins?v=3.0&libraries=intouchTracking"></script>
+```
+
+
+### Initializing Tracking on Map Load
+
+```js
+map.addListener('load', function () {
+    var trackingOptions = {
+        map: map,
+        jobId: 12345,  // Unique job ID
+        type: 'jobTracking',  // Tracking type
+        profile: 'biking',  // Tracking profile (biking)
+        start:  start: { geoposition: "28.63124010064198,77.46734619140625" },
+        fitBounds: true,  // Auto-fit map bounds to route
+        fitboundsOptions: { padding: 100 },  // Padding for bounds fitting
+        strokeWidth: 4,  // Route line width
+        routeColor: 'blue',  // Route color
+        connector: true,  // Show connector line
+        connectorRouteColor: 'gray',  // Connector color
+        connectorRouteDash: [2, 2],  // Dash pattern for connector line
+        start_icon: false,  // Don't show start icon
+        connectorWidth: 2,  // Connector line width
+        end_icon: true  // Show end icon
+        curveLine:true,  /* default false */
+        curveLineColor:"#333", /* default "#333" */
+        curveLineOpacity:1, /* default 1 */
+        curveDasharray:[2,2], /* default [2,2] for straight line use false */
+        curveLineStrokeWeight:2, /* default 4 */
+        curveLineFitbounds:true /* default false */
+    };
+
+    mappls.intouchTracking(trackingOptions, function (data) {
+        console.log(data);  // Log tracking data
+        if (data && data.dur && data.dis) {
+            document.getElementById('dur_dis').innerHTML = `Distance: ${data.dis} | Duration: ${data.dur}`;
+        }
+    });
+});
+```
+
 
 ## Mandatory Parameters
 
@@ -156,11 +232,6 @@ The data object may contain the following properties:
 
 
 ## Usage Examples
-
-### Load SDK
-```js
-<script src="https://apis.mappls.com/advancedmaps/api/cddd0e53-1ae4-43b8-a1ba-04a534140ae8/map_sdk_plugins?v=3.0&libraries=intouchTracking"></script>
-```
 
 ### Initializing Tracking on Map Load
 
