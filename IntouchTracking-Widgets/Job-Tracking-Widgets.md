@@ -15,10 +15,16 @@
   - [Document Version History](#document-version-history)
 - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Parameters](#parameters)
+  - [Mandatory Parameters](#mandatory-parameters)
+  - [Important Parameters](#important-parameters)
   - [Configuration Options (trackingOptions)](#configuration-options-trackingoptions)
   - [Callback Function](#callback-function)
+  - [Tracking callbacks](#tracking-callbacks)
+      - [Recommendation: When you wish to switch between curved line and route line between source \& destination](#recommendation-when-you-wish-to-switch-between-curved-line-and-route-line-between-source--destination)
+        - [Before rider picks up:](#before-rider-picks-up)
+        - [After rider picks up:](#after-rider-picks-up)
   - [Usage Examples](#usage-examples)
+    - [Load SDK](#load-sdk)
     - [Initializing Tracking on Map Load](#initializing-tracking-on-map-load)
     - [Starting the Tracking Session](#starting-the-tracking-session)
     - [Ending the Tracking Session](#ending-the-tracking-session)
@@ -29,11 +35,19 @@
 The mappls.intouchTracking is part of the Mappls SDK (formerly MapmyIndia) and is designed to provide real-time tracking and display of routes and activities on a map. This method supports job tracking functionality to visualize movement and journey progress on a map.
 This document provides an overview of how to use the mappls.intouchTracking function, including configuration options and code examples.
 
+## Mandatory Parameters
 
-## Parameters
+  - `map(object)`: vector map or raster map object from respective Mappls Map SDKs.
+  - `start (Date or String)` : route start location . For eg -  { geoposition: "28.63124010064198,77.46734619140625" }
+  - `type (String)` : jobTracking
+  - `jobId (String or Number)` : 12345
+
+
+## Important Parameters
 
 - **trackingOptions (Object)**: This object contains various configuration settings that define how the tracking plugin behaves on the map. It allows developers to customize the tracking experience.
 - **callback (Function)**: A callback function that is invoked when tracking data is updated or received. The callback will receive an object containing the tracking data.
+
 
 
 ## Configuration Options (trackingOptions)
@@ -50,13 +64,57 @@ The trackingOptions object provides various properties for customizing the track
 - **fitBounds (Boolean)**: If true, the map will automatically adjust its view to fit the route. If false, the map will not adjust its bounds automatically.
 - **fitboundsOptions (Object)**: This option allows you to specify additional parameters when adjusting the map’s bounds. Common parameter is padding, which defines the padding (in pixels) to be applied to the map's edges when fitting bounds.
 - **strokeWidth (Number)**: Specifies the width (in pixels) of the route line displayed on the map.
+- **strokeOpacity (integer)**: //signifies opacity of the route polyline. //optional; default is 1. Opacity values from 0 to 1.
 - **routeColor (String)**: Defines the color of the route line. You can provide a CSS color value (e.g., 'blue', '#FF5733').
 - **connector (Boolean)**: If true, a connector line will be displayed between points on the route.
 - **connectorRouteColor (String)**: Specifies the color of the connector route.
 - **connectorRouteDash (Array)**: An array defining the dash pattern for the connector route. For example, [2, 2] would create a dashed line pattern.
 - **start_icon (Boolean)**: If true, the start location will be marked with an icon. If false, no start icon will be shown.
 - **connectorWidth (Number)**: Defines the width (in pixels) of the connector route line.
+- **connectorOpacity (integer)**: //signifies opacity of the connector polyline. //optional; default is 1. Opacity values from 0 to 1.
 - **end_icon (Boolean)**: If true, the end location will be marked with an icon.
+- **resource** :"route_eta", To set the route resource. Default to "`route_eta`". 
+- **ccpIcon (string)**:'location.png',  Allows to set URL of current rider position icon; Supports PNG format as of now.
+- **ccpIconWidth (integer)**: 70; signifies CCP icon's width, // optional
+- **ccpOffset (x,y)**: [0,20]; //signifies icon's offset in x,y pixels in a div.
+- **sPopup** :”start text”, // optional (for start icon popup)
+- **cPopup** :”`<h1>current popup</h1>”`. To set html in current icon popup (_parameter available only for current location Icon_)
+- **dPopup** :"end text", available for end icon popup
+- **buffer (integer)**:50,  The distance defined for call reroute for the provided current location.
+- **start_icon** : Supports PNG format as of now.
+    ```js
+    {   url: 'location.png',
+        width: 40, 
+        height: 40,
+        popupOptions:
+            {
+                offset: {'bottom': [0, -20]}, 
+                openPopup:false 
+            },
+        offset:[0, -18] 
+    }, 
+    ```
+- `start_icon`: `false` // if set as false then marker will not be visible
+- **end_icon** : Supports PNG format as of now.
+    ```js
+    {   url: 'location.png',
+        width: 40, 
+        height: 40 
+        popupOptions:
+        {
+            offset: {'bottom': [0, -20]}, 
+            openPopup:false 
+        },
+        /* offset:[0, -18] */
+    },
+    ```
+- **end_icon**: `false` // if set as false then marker will not be visible
+- **curveLine (boolean)**: `true`
+- **curveLineColor (string)**: "gray", signifies curve line's color. // can take in hex codes as well; optional 
+- **curveLineOpacity (integer)**: //signifies opacity of the curve polyline. //optional; default is 1. Opacity values from 0 to 1.
+- **curveDasharray** : [2,2], // default: none and optional; used to display route polyline as dashed polyline.
+- **curveLineStrokeWeight (integer)**: 7, // signifies width of the curve polyline on the map; optional
+- **curveLineFitbounds (boolean)**: Whether to include curve line in map fit bound or not, default is `true`,  // optional
 
 ## Callback Function
 The callback function is triggered when tracking data is updated or received. This function receives a data object containing the latest tracking information.
@@ -70,15 +128,32 @@ The data object may contain the following properties:
 - **distance (String)**: Another representation of the distance traveled during the journey.
 - **lastdriverLocation (Object)**: Contains the last known location of the driver, with properties like latitude and longitude.
 
+## Tracking callbacks
 
-## Methods
+- `trackingCallbackData.settrackfit(true/false);`  (default is `true`, fitbounds the track)
+- `trackingCallbackData.setccpContent(“content”);` (set popup on start)
+- `trackingCallbackData.removeCurveLine();` // to remove curved polylines.
+- `trackingCallbackData.setLineVisible(true);` // to show/hide polyline on map.
+- `trackingCallbackData.getEta(function(data){console.log(data);})` //to fetch eta & distance from the plugin
 
-```js
-trackingCallBackData.setLineVisible(true);
-```
-```js
-trackingCallBackData.removeCurveLine(); 
-```
+
+
+#### Recommendation: When you wish to switch between curved line and route line between source & destination
+
+##### Before rider picks up: 
+1. Show the Curved line.
+    - `curveLine:true`
+2. Hide the Route line.
+    - `strokeOpacity:0` and if `connector:true`, set `connectorVisible:false`
+
+##### After rider picks up: 
+1. Call `trackingCallBackData.removeCurveLine();` to remove the curved line.
+2. Call `trackingCallBackData.setLineVisible(true);` to set the route line to visible.
+
+
+
+
+
 
 ## Usage Examples
 
@@ -195,7 +270,6 @@ Need support? contact us!
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
-
 
 
 
