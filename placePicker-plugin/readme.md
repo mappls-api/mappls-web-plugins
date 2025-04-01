@@ -60,22 +60,37 @@ Adding the Nearby Search plugin in the script
 `mappls.placePicker()`
 
 ```js
-/*Place Picker plugin initialization*/
-var options=
-{
-    map:map,
-    /*
-    location:{lat:28.8787,lng:77.08888}, //to open that location on map on initailization
-    closeBtn:true,
-    geolocation:false,
-    closeBtn_callback:closeBtn_callback,
-    search:true,
-    topText:'Location Search',
-    pinImage:'pin.png', //custom pin image
-    pinHeight:40
-    */
+ /*Place Picker plugin initialization*/
+var options = {
+  map: map,
+  header: true,
+  closeBtn: true,
+  pinImage: "https://apis.mapmyindia.com/map_v3/1.png",
+  snapToEntry: true, // default false
+  snappingRadius: 50, // default 50 --> (snappingRadius > 10 and snappingRadius < 200)
+  entryMarkerStyle: {
+    size: 10, // default 10
+    color: "blue", // default '#ff0000'
+    strokeWidth: 4, // default 2
+    strokeColor: "", // default '#ffffff'
+    /* fillColor: '00000',
+                     fillopacity: 1,
+                     lineColor: 'FFFFFF',
+                     linewidth: 5,
+                     lineopacity: 1, */
+  
+  },
 };
-mappls.placePicker(options, callback);
+mappls.advancePlacePicker(options, callback);
+function callback(data) {
+  picker = data;
+  console.log(picker);
+  setTimeout(() => {
+    if (picker.data) {
+      /*  alert(picker.data.formatted_address); */
+    }
+  }, 700);
+}
 ```
 
 #### Mandatory Parameters
@@ -97,6 +112,18 @@ mappls.placePicker(options, callback);
     - `pinHeight`: (number). To adjust the placement of the PIN icon on the map.
     - `searchChars` : number of characters required to start search. e.g searchChars:2
     - `region` : To specify the region for various api response.e.g region : "USA"
+    - `snapToEntry` : To snap to the entry point of the location. default value is false
+    - `snappingRadius` : To specify the snapping radius.
+    - ` entryMarkerStyle` : To modify the entry marker style.
+      -  `size`: 10, // default 10
+      -  `color`: "blue", // default '#ff0000'
+      -  `strokeWidth`: 4, // default 2
+      -  `strokeColor`: "", // default '#ffffff'
+      -  `fillColor`: '00000', 
+      -  `fillopacity`: 1,
+      -  `lineColor`: 'FFFFFF',
+      -  `linewidth`: 5,
+      -  `lineopacity`: 1,
 <br>
 
 ### 2. Calling Mappls Place Picker for programmatically fixed text
@@ -198,4 +225,3 @@ Need support? contact us!
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
-
