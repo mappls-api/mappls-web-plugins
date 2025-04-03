@@ -14,8 +14,9 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 | Version | Last Updated  | Author                                                        |Remarks
 | ------- | ------------- | ------------------------------------------------------------- |-------------- |
-| 1.0  | 15 Dec 2022 | MapmyIndia API Team ([MS](https://github.com/mamtasharma117)) | Initial Commit
+| 1.0  | 15 Dec 2022 | MapmyIndia API Team ([PK](https://github.com/prabhjot729)) | Initial Commit
 | 1.1  | 10 Sep 2024 | MapmyIndia API Team ([PK](https://github.com/prabhjot729)) | Document Update
+| 1.2  | 03 Apr 2025 | MapmyIndia API Team ([PK](https://github.com/prabhjot729)) | Document Update
 
 ## Introduction
 
@@ -288,6 +289,88 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
   - `med` - fitbound action every 3 interpolated location.
   - `fast` - fitbound action every 5 interpolated location.
 
+## Multi Stop Routing 
+
+This Multi Stop Routing allows users to define and manage via points. Via points represent important locations along a route, such as waypoints, checkpoints, or stops. Each via point is assigned a unique ID, a geographical position (latitude & longitude), and a custom marker icon for easy identification on the map.
+
+```js
+via:[{
+                            geoposition:"28.42856320576533,77.5266396473998", 
+                            id:'via1',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                popupHtml:'Via 1',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                        },
+                        {
+                            geoposition:"28.44275991192795,77.51372861117522",
+                            id:'via2',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/1.png',
+                                popupHtml:'Via 2',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                        },
+                        {
+                            geoposition:"28.452552810748116,77.49571088868709",
+                            id:'via3',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                popupHtml:'Via 3',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                    }],
+
+```
+
+### Method for removing via using ID
+
+- For removing a single via point
+```js
+data1.removeVia('via1', function(data){
+    console.log(data);
+});
+```
+- For removing multiple via points
+```js
+data1.removeVia('via1,via2', function(data){
+    console.log(data);
+});
+```
+
+### Multi Stop Routing Properties :
+
+- `via (Array)` : Stores a list of via points for a route.
+
+  - `geoposition (String)` : Latitude and longitude of a via point.
+
+  - `id (String)` : Unique identifier for each via point.
+
+  - `icon (Object)` : Defines the marker/icon properties for each via point.
+
+    - `url (String)` : URL of the marker image.
+
+    - `popupHtml (String)` : Text that appears when the icon's popup is displayed.
+
+    - `width (Number)` : Width of the marker icon in pixels.
+
+    - `height (Number)` : Height of the marker icon in pixels.
+
+    - `popupOptions (Object)` : Additional settings for the popup.
+
+    - `offset (Object)` : Defines the offset for the popup position.
+
+    - `openPopup (Boolean)` : Determines whether the popup should open by default.
 
 ## Implementation Example
 
@@ -343,6 +426,43 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
                         /* 
                         cPopup:'<h3>Current Popup</h3>',
                          */
+                        //For Multi Stop Routing via array of stops
+                        via:[{
+                            geoposition:"28.42856320576533,77.5266396473998", 
+                            id:'via1',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                popupHtml:'Via 1',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                        },
+                        {
+                            geoposition:"28.44275991192795,77.51372861117522",
+                            id:'via2',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/1.png',
+                                popupHtml:'Via 2',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                        },
+                        {
+                            geoposition:"28.452552810748116,77.49571088868709",
+                            id:'via3',
+                            icon:{
+                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                popupHtml:'Via 3',
+                                width:30,
+                                height:45,
+                                popupOptions:{offset: {'bottom': [0, -20]}, openPopup:false },
+                                /* offset:[0, -18] */
+                            }
+                    }],
                     }
                     tracking_plugin = mappls.tracking(tracking_option, function(data) {
                         console.log(data);
