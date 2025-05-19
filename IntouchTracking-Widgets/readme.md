@@ -34,8 +34,8 @@ Before using the Plugin in the your solution, please ensure that the related acc
 # Table of Contents
 
 - [Job Tracking Widget](./Job-Tracking-Widgets.md)
-- [Device Tracking Widget](./Device-Tracking-Widget.md)
-- [Historical Trail Widget](./Historical-Trail-Widget.md)
+- [Device Tracking Widget](./Intouch_deviceBasedTracking.md)
+- [Historical Trail Widget](./Intouch_HistoricalTrail.md)
 
 
 
