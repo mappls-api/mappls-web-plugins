@@ -1,8 +1,3 @@
-## **Important Note** – Please read first
-
-> The [main](https://github.com/mappls-api/mappls-web-plugins/tree/main) branch contains the documentation for releases using the updated Authorization & Authentication mechanism introduced in August 2025.  
-> If you wish to use the releases that use the legacy authentication method based on OAuth 2.0, please refer to the [auth-legacy](https://github.com/mappls-api/mappls-web-plugins/tree/auth-legacy) branch.
-<br>
 
 [<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
