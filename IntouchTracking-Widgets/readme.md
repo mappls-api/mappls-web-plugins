@@ -10,9 +10,18 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 ## Document Version History
 
-| Version | Remarks | Author |
-| ---- | ---- | ---- |
-| 1.0 | Document Update |SDK Product Team ([PK](https://github.com/prabhjot729/))|
+| Version | Last Updated | Team | Author |Remarks |
+| ---- | ---- | ---- | ---- | ---- |
+| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) | OAuth 2 |
+
+
+## Getting Access
+
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://auth.mappls.com/console), in the same project you set up for the Maps SDK.
+
+1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
+    - This APIs follow OAuth2 based security.
+    - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
 
 ## Introduction
 
@@ -22,13 +31,11 @@ This document provides an overview of how to use the mappls.intouchTracking func
 
 ## Getting Access
 
-Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://auth.mappls.com/console), in the same project you set up for the Maps SDK.
 
-1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
     - This APIs follow OAuth2 based security.
-    - `Access Token` can be generated using Token Generation API.
-    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
-    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+    - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
 2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
 
 # Table of Contents

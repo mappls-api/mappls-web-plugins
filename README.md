@@ -1,4 +1,12 @@
 
+## **Important Note** – Please read first
+
+> The [main](https://github.com/mappls-api/mappls-web-plugins/tree/main) branch contains the documentation for releases using the updated Authorization & Authentication mechanism introduced in August 2025.  
+> If you wish to use the releases that use the legacy authentication method based on OAuth 2.0, please refer to the [auth-legacy](https://github.com/mappls-api/mappls-web-plugins/tree/auth-legacy) branch.
+<br>
+
+
+
 [<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
 
 # Mappls Web Plugins
@@ -12,7 +20,7 @@ search and routes on map, to your web or mobile applications.
 
 
 
-You can get your api key to be used in this document here: [https://apis.mappls.com/console/](https://apis.mappls.com/console/)
+You can get your api key to be used in this document here from: [Mappls Console](https://auth.mappls.com/console/)
 
 # Available plugins
 
@@ -128,7 +136,7 @@ Need support? contact us!
 
 
 
-<div align="center">@ Copyright 2022 CE Info Systems Ltd. All Rights Reserved.</div>
+<div align="center">@ Copyright 2025 CE Info Systems Ltd. All Rights Reserved.</div>
 
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 

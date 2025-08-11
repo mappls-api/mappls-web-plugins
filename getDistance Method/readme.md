@@ -8,22 +8,23 @@ Powered with India's most comprehensive and robust mapping functionalities. Now 
 
 ## Getting Access
 
-Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+Before using the API in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://auth.mappls.com/console/), within your app - be it for Mobile OR Web or Cloud integration.
 
-1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
-    - This APIs follow OAuth2 based security.
-    - `Access Token` can be generated using Token Generation API.
-    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
-    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+1. Copy and paste the key from your `credentials` section from your API [keys](https://auth.mappls.com/console/) into the `access_token` query parameter.
+    - Your static key can be secured by whitelisting its usage for particular IPs (in case of cloud app usage) OR a set of domains (in case of a web app)
+    - Your static key obtained from your Console is to be passed as a query parameter: `access_token`.
+
 2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Distance Method.
 
+## Authentication Object - `access_token` mandatory query parameter.
+
+-  `access_token`: "hklmgbwzrxncdyavtsuojqpiefrbhqplnm".
 
 ## Document Version History
 
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 3.0 | 22 April 2022 | Mappls API Team ([MS](https://github.com/mamtasharma117)) |
-
+| Version | Last Updated | Team | Author |Remarks |
+| ---- | ---- | ---- | ---- | ---- |
+| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) | OAuth 2 |
 
 
 ## Introduction
@@ -52,7 +53,7 @@ Visit the following link for visiting the live demo:
 #### Script URL
 
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/{access_token}/map_sdk_plugins"></script>
+<script src="https://sdk.mappls.com/map/sdk/plugins?v=3.0&access_token=<Static Key>"></script>
 ```
 
 ## Method

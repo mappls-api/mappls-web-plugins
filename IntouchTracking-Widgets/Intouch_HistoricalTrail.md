@@ -9,9 +9,18 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 ## Document Version History
 
-| Version | Remarks | Author |
-| ---- | ---- | ---- |
-| 1.0 | Document Update |SDK Product Team ([PK](https://github.com/prabhjot729/))|
+| Version | Last Updated | Team | Author |Remarks |
+| ---- | ---- | ---- | ---- | ---- |
+| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) | OAuth 2 |
+
+
+## Getting Access
+
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://auth.mappls.com/console), in the same project you set up for the Maps SDK.
+
+1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
+    - This APIs follow OAuth2 based security.
+    - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
 
 ## Introduction 
 The mappls.intouchTracking is part of the Mappls SDK (formerly MapmyIndia) and is designed to provide real-time tracking and display of routes and activities on a map. This method supports job tracking functionality to visualize movement and journey progress on a map.
@@ -19,21 +28,20 @@ This document provides an overview of how to use the mappls.intouchTracking func
 
 ## Getting Access
 
-Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://apis.mappls.com/console/), in the same project you set up for the Maps SDK.
+Before using the Plugin in the your solution, please ensure that the related access is enabled in the [Mappls Console](https://auth.mappls.com/console), in the same project you set up for the Maps SDK.
 
-1. Copy and paste the generated `access token` from your API [keys](https://apis.mappls.com/console/) available in the dashboard in the sample code for interactive map development.
+1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
     - This APIs follow OAuth2 based security.
-    - `Access Token` can be generated using Token Generation API.
-    - To know more on how to create your access tokens, please use our authorization API URL. More details available [here](https://about.mappls.com/api/advanced-maps/doc/authentication-api.php)
-    - The `access token` is a valid by default for 24 hours from the time of generation. This can be configured by you in the API console.
+    - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
 2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example - WIP]() & [Working NPM Code - WIP]()
 
 # Table of Contents
 
 - [Intouch Historical Trail Widget](#intouch-historical-trail-widget)
   - [Document Version History](#document-version-history)
-  - [Introduction](#introduction)
   - [Getting Access](#getting-access)
+  - [Introduction](#introduction)
+  - [Getting Access](#getting-access-1)
 - [Table of Contents](#table-of-contents)
 - [Implementation](#implementation)
     - [Step 1: Initialize plugins Map SDK and add (\& libraries=intouchTracking) in the url](#step-1-initialize-plugins-map-sdk-and-add--librariesintouchtracking-in-the-url)
@@ -54,7 +62,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 
 ### Step 1: Initialize plugins Map SDK and add (& libraries=intouchTracking) in the url
 ```js
-<script src="https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk?layer=vector&v=3.0&callback=initMap1"></script>
+<script src="https://sdk.mappls.com/map/sdk/web?v=3.0&access_token=<Static key>&layer=vector&callback=initMap1"></script>
 <script src="https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk_plugins?v=3.0&libraries=intouchTracking"></script> 
 ```
 
