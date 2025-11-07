@@ -217,6 +217,7 @@ tracking_plugin = mappls.tracking(tracking_option, function(data) {
 - DEPRECATED: `trackingCallbackData.setLineHide(true/false);`  (to make path invisible)
 - `trackingCallbackData.removeCurveLine();` // to remove curved polylines.
 - `trackingCallbackData.setLineVisible(true);` // to show/hide polyline on map.
+- `trackingCallbackData.setCcpVisible(true);` // to show/hide ccp Icon(default is `false`).
 - `trackingCallbackData.getEta(function(data){console.log(data);})` //to fetch eta & distance from the plugin
 
 #### Recommendation: When you wish to switch between curved line and route line between source & destination
