@@ -167,7 +167,7 @@ For eg - [{geoposition:"28.63124010064198,77.5541"},{geoposition:"28.63154144208
 - `curveDasharray` : [2,2], // default: none and optional; used to display route polyline as dashed polyline.
 - `curveLineStrokeWeight` (integer): 7, // signifies width of the curve polyline on the map; optional
 - `curveLineFitbounds` (boolean): Whether to include curve line in map fit bound or not, default is `true`,  // optional
-
+- `orderId`: Your reference orderId for tracking. // optional
 
 
 
