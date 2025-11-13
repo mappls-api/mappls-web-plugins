@@ -63,7 +63,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 ### Step 1: Initialize plugins Map SDK and add (& libraries=intouchTracking) in the url
 ```js
 <script src="https://sdk.mappls.com/map/sdk/web?v=3.0&access_token=<Static key>&layer=vector&callback=initMap1"></script>
-<script src="https://apis.mappls.com/advancedmaps/api/<Token>/map_sdk_plugins?v=3.0&libraries=intouchTracking"></script> 
+<script src="https://sdk.mappls.com/map/sdk/plugins?access_token=<Token>&v=3.0&libraries=intouchTracking"></script>
 ```
 
 ### Step 2 : Add map under div container in your project
@@ -205,6 +205,7 @@ Need support? contact us!
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
+
 
 
 
