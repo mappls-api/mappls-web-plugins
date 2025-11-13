@@ -46,7 +46,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
     - This APIs follow OAuth2 based security.
     - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Tracking/mappls-tracking-plugin)
 
 ## Implementation
 
