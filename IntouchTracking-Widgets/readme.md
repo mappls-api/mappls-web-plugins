@@ -4,7 +4,7 @@
 
 Powered with India's most comprehensive and robust mapping functionalities. Now Available for Srilanka, Nepal, Bhutan, Bangladesh and Myanmar.
 
-1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://about.mappls.com/api/dashboard) in the sample code for interactive map development.
+1. Copy and paste the JWT API key or generated Auth token from your API keys available in the dashboard (http://auth.mappls.com/console) in the sample code for interactive map development.
 2. The sample code is provided to help you understand the very basic functionality of MapmyIndia APIs.
 
 
@@ -84,4 +84,5 @@ Need support? contact us!
 
 
 [<p align="center"> <img src="https://about.mappls.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/Mapplsofficial)[![](https://about.mappls.com/june-newsletter/icon2.png)](https://twitter.com/mappls)[![](https://about.mappls.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mappls/)[![](https://about.mappls.com/june-newsletter/icon3.png)](https://www.youtube.com/channel/UCAWvWsh-dZLLeUU7_J9HiOA)
+
 
