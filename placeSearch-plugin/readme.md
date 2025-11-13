@@ -14,7 +14,7 @@ Before using the API in the your solution, please ensure that the related access
 1. Copy and paste the key from your `credentials` section from your API [keys](https://auth.mappls.com/console/) into the `access_token` query parameter.
     - Your static key can be secured by whitelisting its usage for particular IPs (in case of cloud app usage) OR a set of domains (in case of a web app)
     - Your static key obtained from your Console is to be passed as a query parameter: `access_token`.
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Place Search Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Place Search Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placesearch/mappls-placesearch-plugin)
 
 ## Authentication Object - `access_token` mandatory query parameter.
 
@@ -43,7 +43,7 @@ The SDK offers the following basic functionalities:
 ## Sample Implementation
 
 
-Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
 
 For detailed understanding of the plugin, Let’s get started!
 
@@ -141,7 +141,7 @@ If this returns true, then the token is placed successfuly, otherwise token is n
 
 That's All ! 
 
-Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placesearch/mappls-placesearch-plugin) for assistance to create a sample implementation with your own keys. 
 
 
 <br>
