@@ -36,7 +36,7 @@ Before using the Plugin in the your solution, please ensure that the related acc
 1. Copy and paste the generated `access token` from your API [keys](https://auth.mappls.com/console) available in the dashboard in the sample code for interactive map development.
     - This APIs follow OAuth2 based security.
     - `Access Token` can be generated using [Mappls Portal](https://auth.mappls.com/console)
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-example/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Tracking Plugin. [Javascript Code Example](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Tracking/mappls-tracking-plugin) & [Working NPM Code](https://codesandbox.io/p/sandbox/z5qmtq)
 
 # Table of Contents
 
@@ -84,5 +84,6 @@ Need support? contact us!
 
 
 [<p align="center"> <img src="https://about.mappls.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/Mapplsofficial)[![](https://about.mappls.com/june-newsletter/icon2.png)](https://twitter.com/mappls)[![](https://about.mappls.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mappls/)[![](https://about.mappls.com/june-newsletter/icon3.png)](https://www.youtube.com/channel/UCAWvWsh-dZLLeUU7_J9HiOA)
+
 
 
