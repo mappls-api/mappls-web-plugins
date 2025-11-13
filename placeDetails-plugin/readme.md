@@ -45,7 +45,7 @@ The SDK offers the following basic functionalities:
 ## Sample Implementation
 
 
-Visit the [samples](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin) for assistance to create a sample implementation with your own keys. 
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placedetails/mappls-placedetails-plugin) for assistance to create a sample implementation with your own keys. 
 
 For detailed understanding, Let’s get started!
 
@@ -103,7 +103,7 @@ pinObj.setPopup({content:"<h1>Hello Mappls</h1>"});
 ```
 
 
-That's All ! Visit the [samples](https://github.com/mappls-api/mappls-web-plugins/tree/main/eLoc-plugin) for assistance to create a sample implementation with your own keys.
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placedetails/mappls-placedetails-plugin) for assistance to create a sample implementation with your own keys.
 
 
 
