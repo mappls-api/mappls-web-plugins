@@ -30,7 +30,7 @@ Before using the API in the your solution, please ensure that the related access
 1. Copy and paste the key from your `credentials` section from your API [keys](https://auth.mappls.com/console/) into the `access_token` query parameter.
     - Your static key can be secured by whitelisting its usage for particular IPs (in case of cloud app usage) OR a set of domains (in case of a web app)
     - Your static key obtained from your Console is to be passed as a query parameter: `access_token`.
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Direction/mappls-event-alongtheroute-direction-plugin)
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Direction Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Direction/mappls-event-alongtheroute-direction-plugin)
 
 ## Authentication Object - `access_token` mandatory query parameter.
 
