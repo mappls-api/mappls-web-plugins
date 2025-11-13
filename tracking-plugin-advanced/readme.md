@@ -1,4 +1,4 @@
-[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://about.mappls.com/api)
 
 
 # Mappls Tracking Advanced Plugin 
@@ -303,7 +303,7 @@ via:[{
                             geoposition:"28.42856320576533,77.5266396473998", 
                             id:'via1',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                url:'https://apis.mappls.com/map_v3/2.png',
                                 popupHtml:'Via 1',
                                 width:30,
                                 height:45,
@@ -315,7 +315,7 @@ via:[{
                             geoposition:"28.44275991192795,77.51372861117522",
                             id:'via2',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/1.png',
+                                url:'https://apis.mappls.com/map_v3/1.png',
                                 popupHtml:'Via 2',
                                 width:30,
                                 height:45,
@@ -327,7 +327,7 @@ via:[{
                             geoposition:"28.452552810748116,77.49571088868709",
                             id:'via3',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                url:'https://apis.mappls.com/map_v3/2.png',
                                 popupHtml:'Via 3',
                                 width:30,
                                 height:45,
@@ -436,7 +436,7 @@ data1.removeVia('via1,via2', function(data){
                             geoposition:"28.42856320576533,77.5266396473998", 
                             id:'via1',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                url:'https://apis.mappls.com/map_v3/2.png',
                                 popupHtml:'Via 1',
                                 width:30,
                                 height:45,
@@ -448,7 +448,7 @@ data1.removeVia('via1,via2', function(data){
                             geoposition:"28.44275991192795,77.51372861117522",
                             id:'via2',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/1.png',
+                                url:'https://apis.mappls.com/map_v3/1.png',
                                 popupHtml:'Via 2',
                                 width:30,
                                 height:45,
@@ -460,7 +460,7 @@ data1.removeVia('via1,via2', function(data){
                             geoposition:"28.452552810748116,77.49571088868709",
                             id:'via3',
                             icon:{
-                                url:'https://apis.mapmyindia.com/map_v3/2.png',
+                                url:'https://apis.mappls.com/map_v3/2.png',
                                 popupHtml:'Via 3',
                                 width:30,
                                 height:45,
@@ -510,18 +510,18 @@ For any queries and support, please contact:
 [<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
-![](https://www.mapmyindia.com/api/img/icons/support.png)
-[Support](https://www.mapmyindia.com/api/index.php#f_cont)
+![](https://about.mappls.com/api/img/icons/support.png)
+[Support](https://about.mappls.com/api/index.php#f_cont)
 Need support? contact us!
 
 <br></br>
 
-[<p align="center"> <img src="https://www.mapmyindia.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://www.mapmyindia.com/api/img/icons/blog.png)](http://www.mapmyindia.com/blog/)[![](https://www.mapmyindia.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia)
+[<p align="center"> <img src="https://about.mappls.com/api/img/icons/stack-overflow.png"/> ](https://stackoverflow.com/questions/tagged/mapmyindia-api)[![](https://about.mappls.com/api/img/icons/blog.png)](http://about.mappls.com/blog/)[![](https://about.mappls.com/api/img/icons/gethub.png)](https://github.com/MapmyIndia)[<img src="https://mmi-api-team.s3.ap-south-1.amazonaws.com/API-Team/npm-logo.one-third%5B1%5D.png" height="40"/> </p>](https://www.npmjs.com/org/mapmyindia)
 
-[<p align="center"> <img src="https://www.mapmyindia.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://www.mapmyindia.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://www.mapmyindia.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://www.mapmyindia.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
+[<p align="center"> <img src="https://about.mappls.com/june-newsletter/icon4.png"/> ](https://www.facebook.com/MapmyIndia)[![](https://about.mappls.com/june-newsletter/icon2.png)](https://twitter.com/MapmyIndia)[![](https://about.mappls.com/newsletter/2017/aug/llinkedin.png)](https://www.linkedin.com/company/mapmyindia)[![](https://about.mappls.com/june-newsletter/icon3.png)](https://www.youtube.com/user/MapmyIndia/)
 
 <div align="center">@ Copyright 2024 CE Info Systems Pvt. Ltd. All Rights Reserved.</div>
 
-<div align="center"> <a href="https://www.mapmyindia.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://www.mapmyindia.com/about/privacy-policy">Privacy Policy</a> | <a href="https://www.mapmyindia.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://www.mapmyindia.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://www.mapmyindia.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
+<div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
