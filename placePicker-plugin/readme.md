@@ -67,7 +67,7 @@ var options = {
   map: map,
   header: true,
   closeBtn: true,
-  pinImage: "https://apis.mapmyindia.com/map_v3/1.png",
+  pinImage: "https://apis.mappls.com/map_v3/1.png",
   snapToEntry: true, // default false
   snappingRadius: 50, // default 50 --> (snappingRadius > 10 and snappingRadius < 200)
   entryMarkerStyle: {
