@@ -14,7 +14,7 @@ Before using the API in the your solution, please ensure that the related access
 1. Copy and paste the key from your `credentials` section from your API [keys](https://auth.mappls.com/console/) into the `access_token` query parameter.
     - Your static key can be secured by whitelisting its usage for particular IPs (in case of cloud app usage) OR a set of domains (in case of a web app)
     - Your static key obtained from your Console is to be passed as a query parameter: `access_token`.
-2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Marker Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin) 
+2. The sample codes are provided on our domain to help you understand the very basic functionality of Mappls Marker Plugin. [See Sample Codes here](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Marker/mappls-marker-plugin) 
 
 ## Authentication Object - `access_token` mandatory query parameter.
 
@@ -52,7 +52,7 @@ The SDK offers the following basic functionalities:
 
 ## Live Demo
 
-Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
 
 The above implementation uses Mappls Interactive Map JS library as map rendering framework showcasing integration of marker plugin.
 
@@ -223,7 +223,7 @@ obj.setPopup({content:"<h1>Agra</h1>",pin:'123zrr'}); //replaces single marker's
 <br>
 
 
-That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Marker/mappls-marker-plugin) for assistance to create a sample implementation with your own keys.  
 
 
 <br>
