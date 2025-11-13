@@ -42,7 +42,7 @@ The SDK offers the following basic functionalities:
 ## Sample Implementation
 
 
-Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
+Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
 For detailed understanding of the plugin, Let’s get started!
 
@@ -195,7 +195,7 @@ obj.getLocation();
 
 ```
 
-That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
+That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
 
 <br>
