@@ -22,10 +22,11 @@ Before using the API in the your solution, please ensure that the related access
 
 ## Document Version History
 
-| Version | Last Updated | Team | Author |
+| Version | Last Updated | Team             | Author                                               |
+| ------- | ------------ | ---------------- | ---------------------------------------------------- |
+| 1.0     | 07 Aug 2025  | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) |
+| 1.1     | 29 Apr 2026  | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) |
 
-| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) 
-| 1.0 | 29 Apr 2026 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) 
 
 
 ## Introduction
