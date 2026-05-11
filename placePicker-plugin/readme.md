@@ -1,3 +1,8 @@
+---
+title: placePicker.md
+
+---
+
 [<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://about.mappls.com/api)
 
 # Place Picker Plugin for Mappls Web Maps
@@ -21,22 +26,24 @@ Before using the API in the your solution, please ensure that the related access
 
 ## Document Version History
 
-| Version | Last Updated | Team | Author |Remarks |
-| ---- | ---- | ---- | ---- | ---- |
-| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) | OAuth 2 |
+| Version | Last Updated | Team | Author |
+
+| 1.0 | 07 Aug 2025 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) 
+| 1.0 | 29 Apr 2026 | SDK Product Team | Prabhjot Kaur ([PK](https://github.com/prabhjot729)) 
 
 
 ## Introduction
 
-A simple plugin / widget to pick places from the map. This SDK also has integrated Place Picker Plugin as optional component that enables one to narrow down to picked place by searching for it first and then changing the position of the resulting point on map to fine-tune the results.
+A simple plugin / widget to pick places from the map. This SDK also has integrated  Place Picker Plugin as optional component that enables one to narrow down to picked place by searching for it first and then changing the position of the resulting point on map to fine-tune the results.
 
 The plugin can be used in combination with our Interactive Map JS library but it also possesses the adaptability to be used as an independent plugin within any web app implementation. Thus it enables developers to include Mappls Places JS in their own customized solutions easily.
 
 The SDK offers the following basic functionalities: 
 1. Ability to pick or search places directly with or without Mappls Maps visual interface.
 2. A mappls.placePicker() method to initiate the plugin and pick places from Mappls Maps.
-3. Ability to get information from Mappls Place Picker plugin through a callback.
-4. Include the Place Picker Plugin with or without an interactive Map component.
+3. Ability to get information from Mappls  Place Picker plugin through a callback.
+4. Include the  Place Picker Plugin with or without an interactive Map component.
+5. Place/building and Venue boundary highlight.
 
 
 ## Sample Implementation
@@ -52,17 +59,17 @@ For detailed understanding of the plugin, Let’s get started!
 
 Adding the Nearby Search plugin in the script
 ```js
-<script src="https://sdk.mappls.com/map/sdk/plugins?access_token=<Static Key>&v=3.0&libraries=placePicker"></script>
+<script src="https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-with-search-plugin"></script>
 ```
 
-### 1. Initializing the Place Picker plugin
+### 1. Initializing the  Place Picker plugin
 
 #### Method
 
 `mappls.placePicker()`
 
 ```js
- /*Place Picker plugin initialization*/
+ /* Place Picker plugin initialization*/
 var options = {
   map: map,
   header: true,
@@ -106,10 +113,10 @@ function callback(data) {
 1. `Place Options`: any object containing optional configurations for modifying the search request.
     - `location`: location coordinates which will be used as radial bias (not restriction; only BIAS). e.g. `location:[28.61, 77.23]`
     - `geolocation`: boolean value used to enable or disable current location selection . Default is true.
-    - `closeBtn`: (boolean): to give the option to close Place Picker (including hiding the top bar that has search & lower bar area that has the 'Done' button and related sub-text). Default is `true`.
-    - `closeBtn_callback`: A callback method that is called when user clicks on the close button at the top left. To provide a call to action upon user closing the Place Picker plugin and thus providing the ability to continue towards further action by the consuming app.
+    - `closeBtn`: (boolean): to give the option to close  Place Picker  (including hiding the top bar that has search & lower bar area that has the 'Done' button and related sub-text). Default is `true`.
+    - `closeBtn_callback`: A callback method that is called when user clicks on the close button at the top left. To provide a call to action upon user closing the  Place Picker plugin and thus providing the ability to continue towards further action by the consuming app.
     - `search`: (boolean): To enable / disable the integrated Place Search plugin. Default is `true`.
-    - `topText`: The banner text to show at the top as title of the Place Picker plugin. Default is `Place Picker`.
+    - `topText`: The banner text to show at the top as title of the  Place Picker plugin. Default is `Place Picker`.
     - `pinImage`: (URL) The PIN icon on the map. 
     - `pinHeight`: (number). To adjust the placement of the PIN icon on the map.
     - `searchChars` : number of characters required to start search. e.g searchChars:2
@@ -137,7 +144,7 @@ Following is an example of calling Mappls.placePicker() method programmatically 
 mappls.placePicker({location:{lat:28.9898,lng:77.9898}},callback);
 ```
 
-### 3. Method for removing place picker plugin with callback from map
+### 3. Method for removing Place Picker plugin with callback from map
 #### Method
 `remove()`
 
@@ -153,11 +160,11 @@ obj.remove();
 obj.setLocation({lat:28.42424,lng:77.232323});
 ```
 
-### 5. Method for getting location data from Place Picker plugin.
+### 5. Method for getting location data from  Place Picker plugin.
 
 #### Description
 This method is especially useful if no callback is given in options.
-As per the current status of the Place Picker plugin's UI (map view and placement of PIN on map), the location data is returned.
+As per the current status of the  Place Picker plugin's UI (map view and placement of PIN on map), the location data is returned.
 
 #### Method
 `getLocation()`
@@ -194,6 +201,9 @@ obj.getLocation();
 }
 
 ```
+
+
+
 
 That's All ! Visit the [samples](https://about.mappls.com/api/web-sdk/vector-plugin-auth2/Placepicker/mappls-placepicker-plugin) for assistance to create a sample implementation with your own keys. 
 
