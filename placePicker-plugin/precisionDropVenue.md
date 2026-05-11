@@ -1,7 +1,3 @@
----
-title: precisionDropVenue.md
-
----
 
 [<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://about.mappls.com/api)
 
