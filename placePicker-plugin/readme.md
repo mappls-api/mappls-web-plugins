@@ -44,9 +44,9 @@ The SDK offers the following basic functionalities:
 
 ### For detailed understanding of the plugin, Let’s get started!
 
-- (Place Picker Plugin)[https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/placePicker.md]
-- (Precision Drop)[https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/precisionDrop.md]
-- (Precision Drop Venue)[https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/precisionDropVenue.md]
+- [Place Picker Plugin](https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/placePicker.md)
+- [Precision Drop](https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/precisionDrop.md)
+- [Precision Drop Venue](https://github.com/mappls-api/mappls-web-plugins/blob/main/placePicker-plugin/precisionDropVenue.md)
 
 
 
