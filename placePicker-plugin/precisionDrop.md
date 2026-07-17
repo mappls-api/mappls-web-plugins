@@ -53,9 +53,9 @@ For detailed understanding of the plugin, Let’s get started!
 
 ## Plugin's Configurations
 
-Adding the Nearby Search plugin in the script
+Adding the Pricision drop plugin in the script
 ```js
-<script src="https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-advance-placePicker"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=placePicker"></script>
 ```
 
 #### Precision Drop extends the base place picker plugin with:
