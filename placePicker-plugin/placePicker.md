@@ -54,9 +54,9 @@ For detailed understanding of the plugin, Let’s get started!
 
 ## Plugin's Configurations
 
-Adding the Nearby Search plugin in the script
+Adding the Place Picker plugin in the script
 ```js
-<script src="https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-placepicker-with-search-plugin"></script>
+<script src="https://apis.mappls.com/advancedmaps/api/{access_token}/map_sdk_plugins?v=3.0&libraries=placePicker"></script>
 ```
 
 ### 1. Initializing the  Place Picker plugin
