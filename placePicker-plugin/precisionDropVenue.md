@@ -54,7 +54,7 @@ For detailed understanding of the plugin, Let’s get started!
 
 ## Plugin's Configurations
 
-Adding the Nearby Search plugin in the script
+Adding the Precision Drop Venue plugin in the script
 ```js
 <script src="https://about.mappls.com/api/web-sdk/vector-plugin-example/Placepicker/mappls-venue-placePicker"></script>
 ```
